@@ -1,0 +1,14 @@
+/* Globals */
+.global {
+  color: green;
+}
+
+/* About */
+.about {
+  background: red;
+}
+
+/* Contact */
+.contact {
+  background: blue;
+}
