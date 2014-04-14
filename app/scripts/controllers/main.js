@@ -1,8 +1,11 @@
 'use strict';
 
 angular.module('hwdApp')
-  .controller('MainCtrl', function ($scope) {
-    
+	.controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
 
+		$scope.activeView = function() {
+			console.log($location.path());
+			return $location.path();
+		};
 
-  });
+	}]);

@@ -1,0 +1,61 @@
+  
+<div class="home-hero">
+	<div class="container">
+		<h1>Need a good web site designer?</h1>
+		<div class="row">
+		
+		</div>
+	</div>
+</div><!-- /.home-hero -->
+
+
+<div id="content" class="container">
+	
+	<div class="row">
+
+		<div id="main" class="main col-md-8" role="main">
+			
+			<div class="welcome clearfix">
+				<h2>Welcome!</h2>
+				<p class="lead">I'm mostly using this site as a <em>resume</em> to demonstrate my skills as a UI Developer. In addition, this site will be used as a <em>sandbox</em> for front end web development...and possibly more. What does that entail? I'm not sure yet, but I'll figure it out as I go.</p>
+			</div> <!-- End .welcome -->
+			
+			<div class="">
+				<h2>Portfolio</h2>
+				<div class="laptop">
+				
+					<!-- <span class="glare"></span> -->
+					<div class="laptop-bg hidden-xs">
+						<img class="img-responsive" src="/images/ui/macbook.png" alt="Macbook Pro">
+					</div>
+					<div id="laptop-carousel" class="carousel slide">
+
+						<carousel interval="slideInterval">
+							<slide data-ng-repeat="slide in slides" active="slide.active">
+								<img data-ng-src="{{slide.img}}" alt="{{slide.imgAlt}}" />
+								<div class="carousel-caption">
+									<h3>{{slide.caption}}</h3>
+								</div>
+							</slide>
+						</carousel>
+					
+					</div><!-- /.carousel -->
+				
+				</div><!-- /.laptop -->
+			</div>
+
+			<div class="testimonial">
+				<h2>Testimonials</h2>
+				<p>&quot;I have never worked with someone who is so professional and reliable! Chad displayed such a high level of concern and gratitude when completing my projects by my requested deadline! I would recommend Chad for any project.&quot;<span class="test_name">~ Dorothy Schaller</span></p>
+				<a href="testimonials.html">More testimonials</a>
+			</div> <!-- End .testimonial -->
+		
+		</div> <!-- /.main.col-md-8 -->
+
+		<div class="col-md-4">
+			<div ng-include="templates/sidebar.html"></div>
+		</div>
+
+	</div><!-- /.row -->
+
+</div><!-- /.content -->

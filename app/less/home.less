@@ -1,0 +1,109 @@
+@import '../bower_components/bootstrap/less/variables.less';
+@import '../bower_components/bootstrap/less/mixins.less';
+
+@grad-blue-bottom: #1a69a2;
+@grad-blue-top: #128fe0;
+
+.home-hero {
+	.size(100%, auto);
+	padding: 15px 0;
+	.box-shadow(~"inset 0 -4 4px rgba(0,0,0,.35)");
+	background-color: #128fe0;
+	background-image: url(/images/ui/bg/slanted-lines.png), -webkit-linear-gradient(to bottom, @grad-blue-top, @grad-blue-bottom);
+	background-image: url(/images/ui/bg/slanted-lines.png), -moz-linear-gradient(to bottom, @grad-blue-top, @grad-blue-bottom);
+	background-image: url(/images/ui/bg/slanted-lines.png), -o-linear-gradient(to bottom, @grad-blue-top, @grad-blue-bottom);
+	background-image: url(/images/ui/bg/slanted-lines.png), -ms-linear-gradient(to bottom, @grad-blue-top, @grad-blue-bottom);
+	background-image: url(/images/ui/bg/slanted-lines.png), linear-gradient(to bottom, @grad-blue-top, @grad-blue-bottom);
+	
+	
+
+	h1 {
+		color: #fff;
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+	}
+
+}
+
+.laptop {
+	position: relative;
+	margin-bottom: 30px;
+
+	img {
+		border: 0;
+		margin: 0;
+		padding: 0;
+		min-width: 100%;
+	}
+
+	.laptop-bg {
+		
+	}
+
+	.glare {
+		.size(148px, 169px);
+		position: absolute;
+		top: 0; right: 0;
+		z-index: 1000;
+		background: transparent url(/images/laptop-glare.png) no-repeat 0 0;
+		
+	}
+
+}
+
+@media (min-width: @screen-tablet) {
+	
+	.home-hero {
+		height: 260px;
+		border-bottom: 1px solid #c9c9c9;
+	}
+
+	.laptop {
+		height: 390px;
+		margin-bottom: 30px;
+
+		.laptop-bg {
+			position: absolute;
+			z-index: 0;
+			max-width: 100%;
+		}
+
+		.carousel {
+			.size(495px, 310px);
+			margin: 0 auto;
+			top: 26px; left: 1px;
+		}
+		.carousel-inner > .item > img {
+			height: 310px;
+		}
+	}
+
+}
+
+
+@media (min-width: @screen-desktop) {
+	body { 
+		
+	}
+
+	.navbar {
+		.navbar-header {
+			
+		}
+	}
+
+	.content {
+		margin-top: 30px;
+	}
+
+	.home-hero {
+		position: relative;
+		padding: 30px 0;
+	}
+	
+
+
+}
+
+@media (min-width: @screen-lg-desktop) {
+
+}
