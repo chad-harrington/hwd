@@ -535,7 +535,7 @@ footer .twitter-mod {
   }
   .sitenav .nav-icon {
     display: block;
-    margin: 0 0 10px 0;
+    margin: 0 auto 10px auto;
     font-size: 20px;
   }
   .sitenav li {

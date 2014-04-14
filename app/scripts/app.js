@@ -2,9 +2,12 @@
 
 angular.module('hwdApp', [
 	'ui.bootstrap',
+	'ui.utils',
+	'ui.map',
 	'ngResource',
 	'ngRoute',
 	'ngAnimate'
+
 ])
 .config(function ($routeProvider) {
 	$routeProvider
