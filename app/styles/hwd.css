@@ -9,6 +9,10 @@ body {
   min-height: 100%;
   background: url(/images/ui/bg/mooning-bg.jpg) repeat 0 0;
 }
+a:focus,
+button:focus {
+  outline: 0;
+}
 .page {
   position: relative;
 }
@@ -110,6 +114,10 @@ body {
   padding-bottom: 5px;
   border-bottom: 1px dashed #333;
 }
+.nails:first-child,
+.notepad:first-child {
+  margin-top: 0;
+}
 .nails {
   height: 355px;
 }
@@ -147,7 +155,7 @@ body {
   font-family: 'Architects Daughter';
   text-transform: lowercase;
 }
-.panel.notepad li [class^=icon-] {
+.panel.notepad li [class^=glyphicon] {
   color: #ff0000;
   margin-right: 15px;
 }
@@ -313,17 +321,10 @@ footer .twitter-mod {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.6em;
   font-weight: bold;
+  text-transform: capitalize;
   letter-spacing: 0.1em;
   margin: 0 0 10px 0;
   padding: 0;
-}
-.form input[type=text] {
-  font-size: 20px;
-  padding: 3px 5px;
-  width: 300px;
-  height: 35px;
-  background-color: #FFFFFF;
-  box-sizing: border-box;
 }
 .form textarea {
   width: 100%;
@@ -347,7 +348,6 @@ footer .twitter-mod {
 .form p {
   color: #444;
   font-size: 15px;
-  line-height: 2.3em;
 }
 .form .account {
   height: 120px;
@@ -490,6 +490,42 @@ footer .twitter-mod {
 .step p {
   margin-bottom: 10px;
 }
+/* Font Awesome - Radio/Checkbox buttons */
+.fa-inputs .btn-checkbox {
+  border: none;
+  background: none;
+  font-size: 18px;
+  font-family: 'Architects Daughter';
+  letter-spacing: 1px;
+}
+.fa-inputs .btn-checkbox:before {
+  margin-right: 15px;
+  display: inline-block;
+  content: "\f10c";
+  font-size: 22px;
+  font-family: FontAwesome;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.fa-inputs .btn-checkbox.active {
+  color: #1a69a2;
+}
+.fa-inputs .btn-checkbox.active:before {
+  content: "\f05d";
+}
+.fa-inputs .list-group-item.selected {
+  background: #1a69a2;
+}
+.fa-inputs .list-group-item.selected .btn-checkbox {
+  width: 100%;
+  text-align: left;
+}
+.fa-inputs .list-group-item.selected .btn-checkbox.active {
+  color: #fff;
+}
 /* Utility Classes */
 .clear {
   clear: both;
@@ -600,6 +636,13 @@ footer .twitter-mod {
 .hwd-map {
   max-width: 100%;
   height: auto;
+}
+.form-contact legend {
+  border: 0;
+  margin-bottom: 5px;
+}
+.form-contact fieldset {
+  margin-bottom: 20px;
 }
 
 .home-hero {
