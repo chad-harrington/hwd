@@ -223,6 +223,7 @@ footer .connect li {
   float: left;
 }
 footer .connect li a {
+  max-width: 59px;
   line-height: 0;
   float: left;
   padding: 10px;
@@ -256,6 +257,12 @@ footer .connect li .social-facebook:hover {
   background-image: linear-gradient(to bottom, #3b5998 0%, #1e2e4f 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b5998', endColorstr='#ff1e2e4f', GradientType=0);
+}
+footer .connect li .social-linkedin:hover {
+  background-image: -webkit-linear-gradient(top, #52a2cc 0%, #002032 100%);
+  background-image: linear-gradient(to bottom, #52a2cc 0%, #002032 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff52a2cc', endColorstr='#ff002032', GradientType=0);
 }
 footer .connect li .social-twitter:hover {
   background-image: -webkit-linear-gradient(top, #2daae1 0%, #156c93 100%);

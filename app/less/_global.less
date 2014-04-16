@@ -308,6 +308,7 @@ footer {
 			float: left;
 
 			a {
+				max-width: 59px; //TODO: is this needed?
 				line-height: 0;
 				float: left;
 				padding: 10px;
@@ -342,6 +343,9 @@ footer {
 			
 			.social-facebook {
 				&:hover { #gradient > .vertical(@start-color: #3b5998, @end-color: darken(#3b5998, 20%)); }
+			}
+			.social-linkedin {
+				&:hover { #gradient > .vertical(@start-color: #52A2CC, @end-color: darken(#006298, 20%)); }
 			}
 			.social-twitter {
 				&:hover { #gradient > .vertical(@start-color: #2daae1, @end-color: darken(#2daae1, 20%)); }
