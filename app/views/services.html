@@ -1,8 +1,14 @@
 <div class="container">	
-	<h2>Servies</h2>
+	<h2>Services</h2>
 	<div class="row">
 		<div class="col-xs-12">
-			<p>This is the services view.</p>
+			
+			<ul>
+				<li data-ng-repeat="service in services">
+					{{service.name}}
+				</li>
+			</ul>
+
 		</div>
 	</div>
 </div>
