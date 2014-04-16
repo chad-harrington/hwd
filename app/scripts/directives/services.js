@@ -3,7 +3,7 @@
 angular.module('hwdApp')
 .directive('services', function () {
 	return {
-		templateUrl: 'templates/services',
+		templateUrl: 'templates/services.html',
 		restrict: 'EA',
 		controller: 'ServicesCtrl'
 	};
