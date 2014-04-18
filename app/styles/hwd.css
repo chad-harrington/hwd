@@ -5,7 +5,6 @@ html {
 body {
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
-  padding-top: 50px;
   min-height: 100%;
   background: url(/images/ui/bg/mooning-bg.jpg) repeat 0 0;
 }
@@ -14,7 +13,9 @@ button:focus {
   outline: 0;
 }
 .page {
+  padding-top: 60px;
   position: relative;
+  background: url(/images/ui/bg/mooning-bg.jpg) repeat 0 0;
 }
 .header.navbar {
   margin-bottom: 0;
@@ -162,7 +163,7 @@ button:focus {
 footer {
   color: #fff;
   margin-top: 20px;
-  background: url(/images/ui/bg/leather-bg.jpg) repeat 0 0;
+  background: #333333;
 }
 footer h3 {
   font-family: 'Roboto Condensed';
@@ -211,6 +212,10 @@ footer [class^=col-] {
 footer iframe {
   width: 100%;
 }
+footer .connect {
+  margin-left: -8px;
+  margin-right: -8px;
+}
 footer .connect:before,
 footer .connect:after {
   content: " ";
@@ -223,11 +228,10 @@ footer .connect li {
   float: left;
 }
 footer .connect li a {
-  max-width: 59px;
   line-height: 0;
   float: left;
   padding: 10px;
-  margin: 0 15px 15px 0;
+  margin: 0 8px 15px 8px;
   border-radius: 8px;
   background-image: -webkit-linear-gradient(top, #cccccc 0%, #555555 100%);
   background-image: linear-gradient(to bottom, #cccccc 0%, #555555 100%);
@@ -243,70 +247,65 @@ footer .connect li a:active {
   box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.55);
 }
 footer .connect li a i {
-  font-size: 30px;
-  min-width: 30px;
+  font-size: 20px;
   display: block;
   text-align: center;
 }
-footer .connect li a span {
-  text-indent: -9999px;
-  display: block;
-}
-footer .connect li .social-facebook:hover {
+footer .connect li .social-facebook {
   background-image: -webkit-linear-gradient(top, #3b5998 0%, #1e2e4f 100%);
   background-image: linear-gradient(to bottom, #3b5998 0%, #1e2e4f 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b5998', endColorstr='#ff1e2e4f', GradientType=0);
 }
-footer .connect li .social-linkedin:hover {
-  background-image: -webkit-linear-gradient(top, #52a2cc 0%, #002032 100%);
-  background-image: linear-gradient(to bottom, #52a2cc 0%, #002032 100%);
+footer .connect li .social-linkedin {
+  background-image: -webkit-linear-gradient(top, #52a2cc 0%, #2a6c8e 100%);
+  background-image: linear-gradient(to bottom, #52a2cc 0%, #2a6c8e 100%);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff52a2cc', endColorstr='#ff002032', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff52a2cc', endColorstr='#ff2a6c8e', GradientType=0);
 }
-footer .connect li .social-twitter:hover {
+footer .connect li .social-twitter {
   background-image: -webkit-linear-gradient(top, #2daae1 0%, #156c93 100%);
   background-image: linear-gradient(to bottom, #2daae1 0%, #156c93 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2daae1', endColorstr='#ff156c93', GradientType=0);
 }
-footer .connect li .social-gplus:hover {
+footer .connect li .social-gplus {
   background-image: -webkit-linear-gradient(top, #d23e2b 0%, #7d251a 100%);
   background-image: linear-gradient(to bottom, #d23e2b 0%, #7d251a 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd23e2b', endColorstr='#ff7d251a', GradientType=0);
 }
-footer .connect li .social-instagram:hover {
+footer .connect li .social-instagram {
   background-image: -webkit-linear-gradient(top, #a67359 0%, #644535 100%);
   background-image: linear-gradient(to bottom, #a67359 0%, #644535 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffa67359', endColorstr='#ff644535', GradientType=0);
 }
-footer .connect li .social-pinterest:hover {
+footer .connect li .social-pinterest {
   background-image: -webkit-linear-gradient(top, #cb2027 0%, #731216 100%);
   background-image: linear-gradient(to bottom, #cb2027 0%, #731216 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcb2027', endColorstr='#ff731216', GradientType=0);
 }
-footer .connect li .social-skype:hover {
+footer .connect li .social-skype {
   background-image: -webkit-linear-gradient(top, #009ee2 0%, #00577c 100%);
   background-image: linear-gradient(to bottom, #009ee2 0%, #00577c 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff009ee2', endColorstr='#ff00577c', GradientType=0);
 }
-footer .connect li .social-github:hover {
+footer .connect li .social-github {
   background-image: -webkit-linear-gradient(top, #444444 0%, #111111 100%);
   background-image: linear-gradient(to bottom, #444444 0%, #111111 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff444444', endColorstr='#ff111111', GradientType=0);
 }
-footer .connect li .social-stackexchange:hover {
+footer .connect li .social-stackexchange {
   background-image: -webkit-linear-gradient(top, #fe7a15 0%, #ac4b01 100%);
   background-image: linear-gradient(to bottom, #fe7a15 0%, #ac4b01 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffe7a15', endColorstr='#ffac4b01', GradientType=0);
 }
-footer .connect li .social-turntable:hover {
+footer .connect li .social-turntable {
   background-image: -webkit-linear-gradient(top, #f3cc13 0%, #987f08 100%);
   background-image: linear-gradient(to bottom, #f3cc13 0%, #987f08 100%);
   background-repeat: repeat-x;
@@ -569,7 +568,7 @@ footer .twitter-mod {
   opacity: 0;
 }
 @media (min-width: 768px) {
-  body {
+  .page {
     padding-top: 87px;
   }
   .navbar-brand span {

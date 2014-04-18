@@ -12,18 +12,19 @@ html { height: 100%; }
 body {	
 	font-family: Arial, Helvetica, sans-serif;
 	position: relative;
-	padding-top: 50px;
 	min-height: 100%;
 	background: url(/images/ui/bg/mooning-bg.jpg) repeat 0 0;
 }
-
+//html,body {overflow:auto;}
 a:focus,
 button:focus {
 	outline: 0;
 }
 
 .page { 
+	padding-top: 60px;
 	position: relative;
+	background: url(/images/ui/bg/mooning-bg.jpg) repeat 0 0;
 }
 
 .header.navbar {
@@ -242,7 +243,7 @@ button:focus {
 footer {
 	color: #fff;
 	margin-top: 20px;
-	background: url(/images/ui/bg/leather-bg.jpg) repeat 0 0;
+	background: @gray-dark;
 
 	h3 {
 		font-family: 'Roboto Condensed';
@@ -302,18 +303,18 @@ footer {
 	}
 
 	.connect {
+		margin-left: -8px;
+		margin-right: -8px;
 		.clearfix();
 
 		li {
 			float: left;
 
 			a {
-				max-width: 59px; //TODO: is this needed?
 				line-height: 0;
 				float: left;
 				padding: 10px;
-				margin: 0 15px 15px 0;
-				// border: 1px solid @white; 
+				margin: 0 8px 15px 8px;
 				border-radius: 8px;
 				#gradient > .vertical(@start-color: #ccc, @end-color: #555);
 
@@ -328,48 +329,52 @@ footer {
 				}
 
 				i {
-					font-size: 30px;
-					min-width: 30px;
+					font-size: 20px;
 					display: block;
 					text-align: center;
-				}
-
-				span {
-					text-indent: -9999px;	
-					display: block;
 				}
 
 			}
 			
 			.social-facebook {
-				&:hover { #gradient > .vertical(@start-color: #3b5998, @end-color: darken(#3b5998, 20%)); }
+				#gradient > .vertical(@start-color: #3b5998, @end-color: darken(#3b5998, 20%));
+				&:hover {  }
 			}
 			.social-linkedin {
-				&:hover { #gradient > .vertical(@start-color: #52A2CC, @end-color: darken(#006298, 20%)); }
+				#gradient > .vertical(@start-color: #52A2CC, @end-color: darken(#52A2CC, 20%));
+				&:hover {  }
 			}
 			.social-twitter {
-				&:hover { #gradient > .vertical(@start-color: #2daae1, @end-color: darken(#2daae1, 20%)); }
+				#gradient > .vertical(@start-color: #2daae1, @end-color: darken(#2daae1, 20%));
+				&:hover {  }
 			}
 			.social-gplus {
-				&:hover { #gradient > .vertical(@start-color: #d23e2b, @end-color: darken(#d23e2b, 20%)); }
+				#gradient > .vertical(@start-color: #d23e2b, @end-color: darken(#d23e2b, 20%));
+				&:hover {  }
 			}
 			.social-instagram {
-				&:hover { #gradient > .vertical(@start-color: #a67359, @end-color: darken(#a67359, 20%)); }
+				#gradient > .vertical(@start-color: #a67359, @end-color: darken(#a67359, 20%));
+				&:hover {  }
 			}
 			.social-pinterest {
-				&:hover { #gradient > .vertical(@start-color: #cb2027, @end-color: darken(#cb2027, 20%)); }
+				#gradient > .vertical(@start-color: #cb2027, @end-color: darken(#cb2027, 20%));
+				&:hover {  }
 			}
 			.social-skype {
-				&:hover { #gradient > .vertical(@start-color: #009ee2, @end-color: darken(#009ee2, 20%)); }
+				#gradient > .vertical(@start-color: #009ee2, @end-color: darken(#009ee2, 20%));
+				&:hover {  }
 			}
 			.social-github {
-				&:hover { #gradient > .vertical(@start-color: #444, @end-color: darken(#444, 20%)); }
+				#gradient > .vertical(@start-color: #444, @end-color: darken(#444, 20%));
+				&:hover {  }
 			}
 			.social-stackexchange {
-				&:hover { #gradient > .vertical(@start-color: #fe7a15, @end-color: darken(#fe7a15, 20%)); }
+				#gradient > .vertical(@start-color: #fe7a15, @end-color: darken(#fe7a15, 20%));
+				&:hover {  }
 			}
 			.social-turntable {
-				&:hover { #gradient > .vertical(@start-color: #f3cc13, @end-color: darken(#f3cc13, 20%)); }
+				#gradient > .vertical(@start-color: #f3cc13, @end-color: darken(#f3cc13, 20%));
+				&:hover {  }
 			}
 
 		}
@@ -674,7 +679,7 @@ footer {
 
 
 @media (min-width: @screen-tablet) {
-	body {
+	.page {
 		padding-top: 87px;
 	}
 	.navbar-brand {

@@ -18,6 +18,7 @@
 	<!-- build:css styles/vendor.css -->
 	<!-- bower:css -->
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="bower_components/angular-snap/angular-snap.css">
 	<link rel="stylesheet" href="bower_components/bootstrap-select/bootstrap-select.css" />
 	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
 	<!-- endbower -->
@@ -32,18 +33,49 @@
   </head>
 
   <body ng-app="hwdApp">
-	
-	<div class="page" data-ng-controller="MainCtrl">
 
-		<navbar></navbar>
+	<div class="hwd-app" data-ng-controller="MainCtrl">
 		
-		<div class="view-container">
-			<div ng-view class=""></div>	
+	
+		<div data-snap-drawer snap-options="snapOpts">
+
+			<ul class="">
+				<li data-ng-class="{active:isActive('/about')}"><a ng-href="/#/about">
+					<span class="nav-icon glyphicon glyphicon-user"></span>
+					About
+				</a></li>
+				<li data-ng-class="{active:isActive('/services')}"><a ng-href="/#/services">
+					<span class="nav-icon glyphicon glyphicon-cog"></span>
+					Services
+				</a></li>
+				<li data-ng-class="{active:isActive('/portfolio')}"><a ng-href="/#/portfolio">
+					<span class="nav-icon glyphicon glyphicon-briefcase"></span>
+					Portfolio
+				</a></li>
+				<li data-ng-class="{active:isActive('/contact')}"><a ng-href="/#/contact">
+					<span class="nav-icon glyphicon glyphicon-send"></span>
+					Contact
+				</a></li>
+			</ul>
+			
 		</div>
-		
-		<footer></footer>
+
+		<div class="scrollable" data-snap-content data-snap-ignore>
+			<div class="page" data-ng-controller="MainCtrl">
+
+				<navbar></navbar>
+				
+				<div class="view-container">
+					<div ng-view class=""></div>	
+				</div>
+				
+				<footer></footer>
+
+			</div>
+		</div>
 
 	</div>
+
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 	 <script>
@@ -73,6 +105,8 @@
 	<script src="bower_components/angular-ui-map/ui-map.js"></script>
 	<script src="bower_components/angular-animate/angular-animate.js"></script>
 	<script src="bower_components/bootstrap-select/bootstrap-select.js"></script>
+	<script src="bower_components/snapjs/snap.js"></script>
+	<script src="bower_components/angular-snap/angular-snap.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
 
@@ -90,8 +124,9 @@
 	<script src="scripts/directives/navbar.js"></script>
 	<script src="scripts/services/services.js"></script>
 	<script src="scripts/directives/services.js"></script>
-<script src="scripts/directives/footer.js"></script>
-<script src="scripts/controllers/footer.js"></script>
+	<script src="scripts/directives/footer.js"></script>
+	<script src="scripts/controllers/footer.js"></script>
+
 	<!-- endbuild -->
 	
 	<!-- 

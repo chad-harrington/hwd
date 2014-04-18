@@ -6,8 +6,8 @@ angular.module('hwdApp', [
 	'ui.map',
 	'ngResource',
 	'ngRoute',
-	'ngAnimate'
-
+	'ngAnimate',
+	'snap'
 ])
 .config(function ($routeProvider) {
 	$routeProvider

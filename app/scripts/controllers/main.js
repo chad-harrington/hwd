@@ -1,11 +1,10 @@
 'use strict';
 
 angular.module('hwdApp')
-	.controller('MainCtrl', ['$scope', '$location', function ($scope, $location) {
+	.controller('MainCtrl', ['$scope', function ($scope) {
 
-		$scope.activeView = function() {
-			console.log($location.path());
-			return $location.path();
+		$scope.snapOpts = {
+			disable: 'right'
 		};
 
 	}]);
