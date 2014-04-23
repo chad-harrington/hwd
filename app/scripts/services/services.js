@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hwdApp')
-	.service('Services', function() {
+	.service('Services', function Services() {
 		
 		this.query = function() {
 			return [

@@ -18,12 +18,13 @@
 	<!-- build:css styles/vendor.css -->
 	<!-- bower:css -->
 	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-	<link rel="stylesheet" href="bower_components/angular-snap/angular-snap.css">
 	<link rel="stylesheet" href="bower_components/bootstrap-select/bootstrap-select.css" />
-	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.css">
+	<link rel="stylesheet" href="bower_components/angular-snap/angular-snap.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
 	
+	<link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+
 	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300|Architects+Daughter' rel='stylesheet' type='text/css'>
 
 	<!-- build:css({.tmp,app}) styles/hwd.css -->
@@ -37,30 +38,13 @@
 	<div class="hwd-app" data-ng-controller="MainCtrl">
 		
 	
-		<div data-snap-drawer snap-options="snapOpts">
-
-			<ul class="">
-				<li data-ng-class="{active:isActive('/about')}"><a ng-href="/#/about">
-					<span class="nav-icon glyphicon glyphicon-user"></span>
-					About
-				</a></li>
-				<li data-ng-class="{active:isActive('/services')}"><a ng-href="/#/services">
-					<span class="nav-icon glyphicon glyphicon-cog"></span>
-					Services
-				</a></li>
-				<li data-ng-class="{active:isActive('/portfolio')}"><a ng-href="/#/portfolio">
-					<span class="nav-icon glyphicon glyphicon-briefcase"></span>
-					Portfolio
-				</a></li>
-				<li data-ng-class="{active:isActive('/contact')}"><a ng-href="/#/contact">
-					<span class="nav-icon glyphicon glyphicon-send"></span>
-					Contact
-				</a></li>
-			</ul>
+		<div data-snap-drawer>
 			
+			<div data-nav-drawer class="hwd-nav-drawer"></div>
+
 		</div>
 
-		<div class="scrollable" data-snap-content data-snap-ignore>
+		<div class="scrollable" data-snap-content data-snap-options="snapOpts">
 			<div class="page" data-ng-controller="MainCtrl">
 
 				<navbar></navbar>
@@ -122,11 +106,14 @@
 	<script src="scripts/controllers/services.js"></script>
 	<script src="scripts/directives/sidebar.js"></script>
 	<script src="scripts/directives/navbar.js"></script>
+	<script src="scripts/directives/navdrawer.js"></script>
 	<script src="scripts/services/services.js"></script>
+	<script src="scripts/services/navigation.js"></script>
 	<script src="scripts/directives/services.js"></script>
 	<script src="scripts/directives/footer.js"></script>
 	<script src="scripts/controllers/footer.js"></script>
-
+<script src="scripts/services/portfolio.js"></script>
+<script src="scripts/services/testimonials.js"></script>
 	<!-- endbuild -->
 	
 	<!-- 

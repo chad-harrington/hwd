@@ -1,0 +1,15 @@
+<div class="hwd-drawer-heading">
+	<div class="well">
+		<a href="/#/">
+			<h1 class="h3">Harrington</h1>
+			<h2 class="h5">Web Design</h2>
+		</a>
+	</div>
+</div>
+<ul class="list-group">
+	<li data-ng-repeat="item in navData" class="list-group-item" data-ng-class="{active:isActive('/{{item.linkUrl}}')}"><a ng-href="/#/{{item.linkUrl}}">
+		<span class="nav-icon glyphicon {{item.icon}}"></span>
+		{{item.linkText}}
+		<span class="nav-arrow glyphicon glyphicon-chevron-right" data-ng-show="isActive('/{{item.linkUrl}}')"></span>
+	</a></li>
+</ul>

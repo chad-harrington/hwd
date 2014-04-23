@@ -4,8 +4,10 @@
 // colors
 @white: #fff;
 @red: red;
-@grad-blue-bottom: #1a69a2;
-@grad-blue-top: #128fe0;
+@blue: #128fe0;
+@blue2: #1a69a2;
+@grad-blue-bottom: @blue2;
+@grad-blue-top: @blue;
 
 /* Globals */
 html { height: 100%; }
@@ -35,18 +37,62 @@ button:focus {
 	padding-top: 20px;
 }
 
-.navbar-brand {
-	font-family: 'Roboto Condensed';
-	font-weight: bold;
-	font-size: 2em;
-	line-height: 1;
-	text-shadow: inset 1px 1px 7px rgba(0,0,0,1);
+.hwd-navbar {
+	.navbar-brand {
+		font-family: 'Roboto Condensed';
+		font-weight: bold;
+		font-size: 28px;
+		line-height: 1;
+		border-left: 1px solid #fff;
+	
+		span {
+			font-size: .97em;
+			word-spacing: -7px;
+			font-family: 'Architects Daughter';
+		}
+		
+		&:hover {
+			color: lighten(@blue, 5%);
+		}
 
-	span {
-		font-size: .97em;
-		word-spacing: -7px;
-		font-family: 'Architects Daughter';
 	}
+
+	.navbar-toggle {
+		float: left;
+		margin-left: 15px;
+		border-radius: 0;
+		padding: 20px;
+		margin: 0;
+		border-width: 0 1px 0 0;
+		
+		.icon-bar {
+			height: 4px;
+			width: 25px;
+			background-color: @navbar-default-color;
+		}
+		
+		.drawer-close {
+			color: @navbar-default-color;
+			display: none;
+			height: 20px;
+			width: 25px;
+			font-size: 20px;
+			vertical-align: middle;
+		}
+
+		&:hover,&:focus {
+			background-color: #fff;
+
+			.icon-bar {
+				background-color: lighten(@blue,5%);
+			}
+			.drawer-close {
+				color: lighten(@blue, 5%);
+			}
+
+		}
+	}
+
 }
 
 .sitenav {
@@ -63,6 +109,8 @@ button:focus {
 	li {
 		font-size: 1.2em;
 		border-bottom: 1px solid #E6E6E6;
+		
+		a { font-family: 'Architects Daughter'; }
 
 		&.home 				{  }	
 		&.about 			{  }
@@ -89,6 +137,92 @@ button:focus {
 
 	}
 
+}
+
+.snap-drawers {
+	background: #222;
+}
+
+.hwd-drawer-heading {
+	
+	.well {
+		padding: 10px;
+		margin: 0;
+		border: 0;
+		min-height: 0;
+		background-color: transparent;
+	}
+	
+	a { 
+		color: #fff; 
+		&:hover { text-decoration: none; }
+	}
+	h1, h2 { line-height: 1; letter-spacing: 1px; }
+	h1 { font-family: 'Roboto Condensed'; margin: 0 0 2px 0; }
+	h2 { font-family: 'Architects Daughter'; margin: 0; }
+
+}
+
+.hwd-nav-drawer {
+	.list-group-item {	
+		font-size: 18px;
+		font-family: 'Architects Daughter';
+		background-color: transparent;
+		border-color: rgba(0,0,0,0.2);
+		border-width: 1px 0 1px 0;
+
+		.nav-icon {
+			margin-right: 10px;
+		}
+
+		a {
+			color: #fff;
+
+			&:hover { 
+				text-decoration: none; 
+			}
+		}
+		
+		.nav-icon {
+			-webkit-transition: margin-right 0.5s ease;
+			-moz-transition: margin-right 0.5s ease;
+			-o-transition: margin-right 0.5s ease;
+			-ms-transition: margin-right 0.5s ease;
+			transition: margin-right 0.5s ease;	
+			margin-right:10px
+		}
+
+		.nav-arrow { float: right; }
+
+		&:first-child, &:last-child {
+			border-radius: 0;
+		}
+		
+		&.active {
+			background: @blue;
+			a {
+				color: #fff;
+			}
+			.nav-icon {
+				margin-right: 20px;
+			}
+		}
+	} 
+
+}
+
+.snapjs-left {
+
+	.navbar-toggle {
+	
+		.icon-bar {
+			display: none;
+		}
+
+		.drawer-close {
+			display: block;
+		}
+	}
 }
 
 .main {
@@ -464,14 +598,6 @@ footer {
 		}
 	}
 
-	.btn-clear:hover {
-		color: #AF1920;
-	}
-
-	.btn-submit:hover {
-		color: #137AE9;
-	}
-
 }
 
 .folio_block {
@@ -703,7 +829,6 @@ footer {
 			height: 85px;
 
 			a {
-				font-family: 'Architects Daughter';
 				padding-bottom: 0;
 				height: 100%;
 				

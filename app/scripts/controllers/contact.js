@@ -28,6 +28,8 @@ angular.module('hwdApp')
 		}
 	];
 
-
-
+	$scope.otherInterestedServiceMode = function() {
+		return $scope.interestedServices[$scope.interestedServices.length-1].selected;
+	};
+	
 });

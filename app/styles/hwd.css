@@ -23,17 +23,53 @@ button:focus {
 #content {
   padding-top: 20px;
 }
-.navbar-brand {
+.hwd-navbar .navbar-brand {
   font-family: 'Roboto Condensed';
   font-weight: bold;
-  font-size: 2em;
+  font-size: 28px;
   line-height: 1;
-  text-shadow: inset 1px 1px 7px #000000;
+  border-left: 1px solid #fff;
 }
-.navbar-brand span {
+.hwd-navbar .navbar-brand span {
   font-size: .97em;
   word-spacing: -7px;
   font-family: 'Architects Daughter';
+}
+.hwd-navbar .navbar-brand:hover {
+  color: #1f9ced;
+}
+.hwd-navbar .navbar-toggle {
+  float: left;
+  margin-left: 15px;
+  border-radius: 0;
+  padding: 20px;
+  margin: 0;
+  border-width: 0 1px 0 0;
+}
+.hwd-navbar .navbar-toggle .icon-bar {
+  height: 4px;
+  width: 25px;
+  background-color: #777777;
+}
+.hwd-navbar .navbar-toggle .drawer-close {
+  color: #777777;
+  display: none;
+  height: 20px;
+  width: 25px;
+  font-size: 20px;
+  vertical-align: middle;
+}
+.hwd-navbar .navbar-toggle:hover,
+.hwd-navbar .navbar-toggle:focus {
+  background-color: #fff;
+}
+.hwd-navbar .navbar-toggle:hover .icon-bar,
+.hwd-navbar .navbar-toggle:focus .icon-bar {
+  background-color: #1f9ced;
+}
+.hwd-navbar .navbar-toggle:hover .drawer-close,
+.hwd-navbar .navbar-toggle:focus .drawer-close {
+  color: #1f9ced;
 }
 .sitenav .nav-icon {
   margin-right: 10px;
@@ -45,6 +81,84 @@ button:focus {
 .sitenav li {
   font-size: 1.2em;
   border-bottom: 1px solid #E6E6E6;
+}
+.sitenav li a {
+  font-family: 'Architects Daughter';
+}
+.snap-drawers {
+  background: #222;
+}
+.hwd-drawer-heading .well {
+  padding: 10px;
+  margin: 0;
+  border: 0;
+  min-height: 0;
+  background-color: transparent;
+}
+.hwd-drawer-heading a {
+  color: #fff;
+}
+.hwd-drawer-heading a:hover {
+  text-decoration: none;
+}
+.hwd-drawer-heading h1,
+.hwd-drawer-heading h2 {
+  line-height: 1;
+  letter-spacing: 1px;
+}
+.hwd-drawer-heading h1 {
+  font-family: 'Roboto Condensed';
+  margin: 0 0 2px 0;
+}
+.hwd-drawer-heading h2 {
+  font-family: 'Architects Daughter';
+  margin: 0;
+}
+.hwd-nav-drawer .list-group-item {
+  font-size: 18px;
+  font-family: 'Architects Daughter';
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-width: 1px 0 1px 0;
+}
+.hwd-nav-drawer .list-group-item .nav-icon {
+  margin-right: 10px;
+}
+.hwd-nav-drawer .list-group-item a {
+  color: #fff;
+}
+.hwd-nav-drawer .list-group-item a:hover {
+  text-decoration: none;
+}
+.hwd-nav-drawer .list-group-item .nav-icon {
+  -webkit-transition: margin-right 0.5s ease;
+  -moz-transition: margin-right 0.5s ease;
+  -o-transition: margin-right 0.5s ease;
+  -ms-transition: margin-right 0.5s ease;
+  transition: margin-right 0.5s ease;
+  margin-right: 10px;
+}
+.hwd-nav-drawer .list-group-item .nav-arrow {
+  float: right;
+}
+.hwd-nav-drawer .list-group-item:first-child,
+.hwd-nav-drawer .list-group-item:last-child {
+  border-radius: 0;
+}
+.hwd-nav-drawer .list-group-item.active {
+  background: #128fe0;
+}
+.hwd-nav-drawer .list-group-item.active a {
+  color: #fff;
+}
+.hwd-nav-drawer .list-group-item.active .nav-icon {
+  margin-right: 20px;
+}
+.snapjs-left .navbar-toggle .icon-bar {
+  display: none;
+}
+.snapjs-left .navbar-toggle .drawer-close {
+  display: block;
 }
 .main h2 {
   color: #F60;
@@ -377,12 +491,6 @@ footer .twitter-mod {
 .form .user-questions label[for=service] {
   margin-bottom: 10px;
 }
-.form .btn-clear:hover {
-  color: #AF1920;
-}
-.form .btn-submit:hover {
-  color: #137AE9;
-}
 .folio_block {
   margin: 20px 0;
   float: left;
@@ -586,7 +694,6 @@ footer .twitter-mod {
     height: 85px;
   }
   .sitenav li a {
-    font-family: 'Architects Daughter';
     padding-bottom: 0;
     height: 100%;
   }
