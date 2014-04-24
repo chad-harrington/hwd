@@ -72,12 +72,14 @@ button:focus {
 		}
 		
 		.drawer-close {
-			color: @navbar-default-color;
 			display: none;
+			color: @navbar-default-color;
 			height: 20px;
 			width: 25px;
 			font-size: 20px;
 			vertical-align: middle;
+			.transition(all 5s ease);
+			.rotate(0deg);
 		}
 
 		&:hover,&:focus {
@@ -221,6 +223,7 @@ button:focus {
 
 		.drawer-close {
 			display: block;
+			.rotate(540deg);
 		}
 	}
 }
@@ -803,6 +806,42 @@ footer {
 
 }
 
+.spin {
+	-webkit-transform-origin: 50% 50%;
+	transform-origin:50% 50%;
+	-ms-transform-origin:50% 50%; /* IE 9 */
+	-webkit-animation: spin .5s alternate backwards;
+	-moz-animation: spin .5s alternate backwards;
+	-o-animation: spin .5s alternate backwards;
+	animation: spin .5s alternate backwards;
+}
+
+@-moz-keyframes spin {
+	from {
+		-moz-transform: rotate(0deg);
+	}
+	to {
+		-moz-transform: rotate(180deg);
+	}
+}
+
+@-webkit-keyframes spin {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(180deg);
+	}
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(180deg);
+	}
+}
 
 @media (min-width: @screen-tablet) {
 	.page {

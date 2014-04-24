@@ -52,12 +52,17 @@ button:focus {
   background-color: #777777;
 }
 .hwd-navbar .navbar-toggle .drawer-close {
-  color: #777777;
   display: none;
+  color: #777777;
   height: 20px;
   width: 25px;
   font-size: 20px;
   vertical-align: middle;
+  -webkit-transition: all 5s ease;
+  transition: all 5s ease;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 .hwd-navbar .navbar-toggle:hover,
 .hwd-navbar .navbar-toggle:focus {
@@ -159,6 +164,9 @@ button:focus {
 }
 .snapjs-left .navbar-toggle .drawer-close {
   display: block;
+  -webkit-transform: rotate(540deg);
+  -ms-transform: rotate(540deg);
+  transform: rotate(540deg);
 }
 .main h2 {
   color: #F60;
@@ -674,6 +682,40 @@ footer .twitter-mod {
 }
 .fade.ng-leave-active {
   opacity: 0;
+}
+.spin {
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -ms-transform-origin: 50% 50%;
+  /* IE 9 */
+  -webkit-animation: spin .5s alternate backwards;
+  -moz-animation: spin .5s alternate backwards;
+  -o-animation: spin .5s alternate backwards;
+  animation: spin .5s alternate backwards;
+}
+@-moz-keyframes spin {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(180deg);
+  }
+}
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(180deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
 }
 @media (min-width: 768px) {
   .page {
