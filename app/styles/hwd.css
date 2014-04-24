@@ -641,7 +641,7 @@ footer .twitter-mod {
   content: "\f05d";
 }
 .fa-inputs .list-group-item.selected {
-  background: #1a69a2;
+  background: #36a6ef;
 }
 .fa-inputs .list-group-item.selected .btn-checkbox {
   width: 100%;
@@ -658,33 +658,6 @@ footer .twitter-mod {
   position: relative;
 }
 /* Animation Classes */
-.fade {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  opacity: 1;
-}
-.fade.ng-enter,
-.fade.ng-leave {
-  -webkit-transition: all 1s ease;
-  -moz-transition: all 1s ease;
-  -o-transition: all 1s ease;
-  transition: all 1s ease;
-}
-.fade.ng-enter {
-  opacity: 0;
-}
-.fade.ng-enter-active {
-  opacity: 1;
-}
-.fade.ng-leave {
-  opacity: 1;
-}
-.fade.ng-leave-active {
-  opacity: 0;
-}
 .spin {
   -webkit-transform-origin: 50% 50%;
   transform-origin: 50% 50%;

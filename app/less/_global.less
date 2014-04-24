@@ -763,7 +763,7 @@ footer {
 	}
 
 	.list-group-item.selected {
-		background: #1a69a2;
+		background: lighten(@blue, 10%);
 		
 		.btn-checkbox {
 			width: 100%;
@@ -785,27 +785,9 @@ footer {
 
 .view-container { position: relative; }
 /* Animation Classes */
-.fade {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 100%;
-	opacity: 1;
-	
-	&.ng-enter,
-	&.ng-leave {
-		-webkit-transition: all 1s ease;
-		-moz-transition: all 1s ease;
-		-o-transition: all 1s ease;
-		transition: all 1s ease;
-	}
-	&.ng-enter 				{ opacity: 0; }
-	&.ng-enter-active 		{ opacity: 1; }
-	&.ng-leave 				{ opacity: 1; }
-	&.ng-leave-active 		{ opacity: 0; }
 
-}
+
+// }
 
 // Spin
 .spin {
