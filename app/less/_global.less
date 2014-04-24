@@ -44,6 +44,7 @@ button:focus {
 		font-size: 28px;
 		line-height: 1;
 		border-left: 1px solid #fff;
+		.transition(color .6s ease);
 	
 		span {
 			font-size: .97em;
@@ -806,14 +807,15 @@ footer {
 
 }
 
+// Spin
 .spin {
 	-webkit-transform-origin: 50% 50%;
 	transform-origin:50% 50%;
 	-ms-transform-origin:50% 50%; /* IE 9 */
-	-webkit-animation: spin .5s alternate backwards;
-	-moz-animation: spin .5s alternate backwards;
-	-o-animation: spin .5s alternate backwards;
-	animation: spin .5s alternate backwards;
+	-webkit-animation: spin .5s alternate;
+	-moz-animation: spin .5s alternate;
+	-o-animation: spin .5s alternate;
+	animation: spin .5s alternate;
 }
 
 @-moz-keyframes spin {
@@ -843,6 +845,9 @@ footer {
 	}
 }
 
+
+
+/* Media Queries */
 @media (min-width: @screen-tablet) {
 	.page {
 		padding-top: 87px;
@@ -862,35 +867,48 @@ footer {
 			font-size: 20px;
 		}
 
-		li {
-			text-align: center;
-			border-bottom: 0;
-			height: 85px;
+		> .navbar-nav {
 
-			a {
-				padding-bottom: 0;
-				height: 100%;
-				
+			> li {
+				text-align: center;
+				border-bottom: 0;
+				height: 85px;
 
-				span,i {
-					-webkit-transition: top 0.5s ease;
-					-moz-transition: top 0.5s ease;
-					-o-transition: top 0.5s ease;
-					-ms-transition: top 0.5s ease;
-					transition: top 0.5s ease;	
-					top: -1px;
-					position: relative;
-				}
+				> a {
+					padding-bottom: 0;
+					height: 100%;
+					
 
-				&:hover {
 					span,i {
-						top: -4px;
+						-webkit-transition: all 0.5s ease;
+						-moz-transition: all 0.5s ease;
+						-o-transition: all 0.5s ease;
+						-ms-transition: all 0.5s ease;
+						transition: all 0.5s ease;	
+						top: -1px;
+						position: relative;
+					}
+
+					&:hover {
+						color: lighten(@blue,10%);
+						span,i {
+							top: -4px;
+						}
+					}
+
+				}
+				
+				&.active > a {
+					color: @gray-dark;
+					&:hover {
+						color: @gray-dark;
+						span,i {top: -1px;}
 					}
 				}
 
 			}
-
 		}
+		
 
 	}
 
