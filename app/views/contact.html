@@ -10,30 +10,40 @@
 		
 		<div class="col-md-8">
 			
-			<form name="formContact" role="form" class="form form-contact">
+			<form name="contactForm" role="form" class="form form-contact" novalidate data-ng-submit="submit()">
 
 				<fieldset>
 					<legend>Please Send Your Contact Info</legend>
-					<p>If you are interested in my services please fill out the form below and I will contact you as soon as possible.</p>
+					<p class="lead">If you are interested in my services please fill out the form below and I will contact you as soon as possible.</p>
+					<p class="text-right"><small>* <i> required fields</i></small></p>
 					<div class="row">
 						<div class="col-sm-6">
-							<div class="form-group">
-								<label for="userFirst">First Name</label>
-								<input type="text" name="userFirst" id="userFirst" class="form-control"></input>
-							</div>
-							<div class="form-group">
-								<label for="userLast">Last Name</label>
-								<input type="text" name="userLast" id="userLast" class="form-control">
+							<div class="form-group" data-ng-class="{'has-error': contactForm.userFirst.$invalid && contactForm.userFirst.$dirty, 'has-success': contactForm.userFirst.$valid}">
+								<label for="userFirst">First Name *</label>
+								<input type="text" name="userFirst" id="userFirst" class="form-control" data-ng-model="user.first" required></input>
+								<p class="help-block" data-ng-show="contactForm.userFirst.$invalid && contactForm.userFirst.$dirty">first name is required</p>
 							</div>
 						</div>
 						<div class="col-sm-6">
-							<div class="form-group">
-								<label for="userPhone">Phone</label>
-								<input type="tel" name="userPhone" id="userPhone" class="form-control">
+							<div class="form-group" data-ng-class="{'has-error': contactForm.userLast.$invalid && contactForm.userLast.$dirty, 'has-success': contactForm.userLast.$valid}">
+								<label for="userLast">Last Name *</label>
+								<input type="text" name="userLast" id="userLast" class="form-control" data-ng-model="user.last" required>
+								<p class="help-block" data-ng-show="contactForm.userLast.$invalid && contactForm.userLast.$dirty">last name is required</p>
 							</div>
-							<div class="form-group">
-								<label for="userEmail">Email</label>
-								<input type="email" name="userEmail" id="userEmail" class="form-control">
+						</div>
+					</div><!-- /.row --> 
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group" data-ng-class="{'has-error': contactForm.userEmail.$invalid && contactForm.userEmail.$dirty, 'has-success': contactForm.userEmail.$valid}">
+								<label for="userEmail">Email *</label>
+								<input type="email" name="userEmail" id="userEmail" class="form-control" data-ng-model="user.email" required>
+								<p class="help-block" data-ng-show="contactForm.userEmail.$invalid && contactForm.userEmail.$dirty && contactForm.submitted">wrong email.</p>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group" data-ng-class="{'has-error': contactForm.userPhone.$invalid && contactForm.userPhone.$dirty, 'has-success': contactForm.userPhone.$valid}">
+								<label for="userPhone">Phone</label>
+								<input type="tel" name="userPhone" id="userPhone" class="form-control" data-ng-model="user.phone" data-ui-mask="(999) 999-9999">
 							</div>
 						</div>
 					</div><!-- /.row --> 
@@ -50,13 +60,13 @@
 						</ul>
 					</div>
 					<div class="form-group" data-ng-show="otherInterestedServiceMode()">
-						<label for="otherServiceType">Tell me about the service you are interested in:</label>
+						<label for="otherServiceType">Tell me about the service you are interested in: <small>(optional)</small></label>
 						<textarea id="otherServiceType" class="form-control"></textarea>
 					</div>
 					<div class="form-group">
 						<div class="row">
 							<div class="col-sm-6">
-								<label for="numPages">How many pages will your website have?</label>
+								<label for="numPages">How many pages will your site have?</label>
 								<select name="numPages" id="numPages" ui-jq="selectpicker" class="form-control selectpicker">
 									<option value="">please choose one...</option>
 									<option value="5">1 to 5 pages</option>
@@ -88,14 +98,13 @@
 						
 					</div>
 					<div class="form-group">
-						<label for="comments">Message: <span>(optional)</span></label>
+						<label for="comments">Message: <small>(optional)</small></label>
 						<textarea name="comments2" id="comments" class="form-control"></textarea>
 					</div>
 				</fieldset>
 
-				<div class="btn-wrap">
-					<a href="#" class="btn btn-primary btn-3d big"><span><span>Clear</span></span></a>
-					<a href="#" class="btn btn-primary btn-3d big btn-submit"><span><span>Submit</span></span></a>
+				<div class="btn-wrap text-right">
+					<button class="btn btn-primary btn-3d big btn-submit btn-lg"><span><span>Submit</span></span></button>
 				</div>
 
 			</form>
@@ -103,7 +112,7 @@
 		</div>
 
 		<div class="col-md-4">
-			<sidebar></sidebar>
+			<!-- <sidebar></sidebar> -->
 		</div>
 
 	</div><!-- /.row --> 

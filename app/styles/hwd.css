@@ -9,7 +9,8 @@ body {
   background: url(/images/ui/bg/mooning-bg.jpg) repeat 0 0;
 }
 a:focus,
-button:focus {
+button:focus,
+.btn:focus {
   outline: 0;
 }
 .page {
@@ -464,8 +465,7 @@ footer .twitter-mod {
   box-sizing: border-box;
   resize: vertical;
 }
-.form input.text:focus,
-.form textarea:focus {
+.form input.text:focus {
   background-color: #e7efef;
 }
 .form select {
@@ -477,7 +477,6 @@ footer .twitter-mod {
 }
 .form p {
   color: #444;
-  font-size: 15px;
 }
 .form .account {
   height: 120px;
@@ -614,6 +613,7 @@ footer .twitter-mod {
 .step p {
   margin-bottom: 10px;
 }
+/* CUSTOM FORM ELEMENTS */
 /* Font Awesome - Radio/Checkbox buttons */
 .fa-inputs .btn-checkbox {
   border: none;
@@ -621,6 +621,7 @@ footer .twitter-mod {
   font-size: 18px;
   font-family: 'Architects Daughter';
   letter-spacing: 1px;
+  text-align: left;
 }
 .fa-inputs .btn-checkbox:before {
   margin-right: 15px;
@@ -640,15 +641,76 @@ footer .twitter-mod {
 .fa-inputs .btn-checkbox.active:before {
   content: "\f05d";
 }
+.fa-inputs .list-group-item {
+  padding: 0;
+  border: 0;
+}
+.fa-inputs .list-group-item .btn-checkbox {
+  width: 100%;
+  padding: 10px 20px;
+  text-align: left;
+  border: 1px solid #dddddd;
+}
 .fa-inputs .list-group-item.selected {
   background: #36a6ef;
 }
 .fa-inputs .list-group-item.selected .btn-checkbox {
-  width: 100%;
-  text-align: left;
-}
-.fa-inputs .list-group-item.selected .btn-checkbox.active {
   color: #fff;
+}
+.fa-inputs .list-group-item:first-child .btn-checkbox {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.fa-inputs .list-group-item:last-child .btn-checkbox {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+/* Custom select/dropdown - overrides bootstrap-select.css */
+.bootstrap-select .btn {
+  padding-right: 50px;
+}
+.bootstrap-select .btn:hover,
+.bootstrap-select .btn:focus {
+  background-color: #fff;
+  border: 1px solid #36a6ef;
+}
+.bootstrap-select .btn:focus {
+  outline: 0 !important;
+}
+.bootstrap-select .btn:active {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.bootstrap-select .dropdown-menu li > a:hover,
+.bootstrap-select .dropdown-menu li > a:focus {
+  color: #fff;
+  background: #36a6ef;
+}
+.bootstrap-select .dropdown-menu li.selected a {
+  color: #333333;
+  background: #acdaf8;
+}
+.bootstrap-select.btn-group .btn .caret {
+  color: #fff;
+  width: 40px;
+  height: 34px;
+  border: none;
+  margin: 0;
+  position: absolute;
+  top: -1px;
+  right: -1px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  background: #36a6ef;
+}
+.bootstrap-select.btn-group .btn .caret:after {
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-size: 24px;
+  content: '\f107';
+}
+.bootstrap-select.open .dropdown-toggle.btn {
+  background: #fff;
 }
 /* Utility Classes */
 .clear {
@@ -697,7 +759,10 @@ footer .twitter-mod {
   .page {
     padding-top: 87px;
   }
-  .navbar-brand span {
+  .hwd-navbar .navbar-brand {
+    border-left: 0;
+  }
+  .hwd-navbar .navbar-brand span {
     display: block;
     font-size: .75em;
   }
@@ -735,12 +800,12 @@ footer .twitter-mod {
   .sitenav > .navbar-nav > li.active > a {
     color: #333333;
   }
+  .sitenav > .navbar-nav > li.active > a span,
+  .sitenav > .navbar-nav > li.active > a i {
+    top: -4px;
+  }
   .sitenav > .navbar-nav > li.active > a:hover {
     color: #333333;
-  }
-  .sitenav > .navbar-nav > li.active > a:hover span,
-  .sitenav > .navbar-nav > li.active > a:hover i {
-    top: -1px;
   }
   footer .col-sm-6 {
     min-height: 110px;

@@ -2,8 +2,6 @@
 
 angular.module('hwdApp')
 .controller('ContactCtrl', function ($scope) {
-	
-	//$scope.formContact;
 
 	$scope.interestedServices = [
 		{
@@ -31,5 +29,13 @@ angular.module('hwdApp')
 	$scope.otherInterestedServiceMode = function() {
 		return $scope.interestedServices[$scope.interestedServices.length-1].selected;
 	};
-	
+
+	$scope.submit = function() {
+		if ($scope.contactForm.$valid) {
+			console.log('sending request to server');
+		} else {
+			$scope.contactFrom.submitted = true;
+		}
+	};
+
 });
