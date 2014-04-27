@@ -781,12 +781,24 @@ footer {
 			&.active {
 				
 			}
+
+			&:focus {
+				background: lighten(@blue, 25%);
+			}
+			
 		}
 
 		&.selected {
+			
 			background: lighten(@blue, 10%);
 			.btn-checkbox {
 				color: #fff;
+				
+				&:focus {
+					background: lighten(@blue, 10%);
+					.box-shadow(inset -7px 0 55px -18px rgba(0, 0, 0, 0.6));
+				}
+
 			}
 		}
 
@@ -832,7 +844,7 @@ footer {
 			
 			&.selected a {
 				color: @text-color;
-				background: lighten(@blue, 35%);
+				background: lighten(@blue, 25%);
 			}	
 			
 

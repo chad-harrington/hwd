@@ -651,11 +651,19 @@ footer .twitter-mod {
   text-align: left;
   border: 1px solid #dddddd;
 }
+.fa-inputs .list-group-item .btn-checkbox:focus {
+  background: #7dc6f5;
+}
 .fa-inputs .list-group-item.selected {
   background: #36a6ef;
 }
 .fa-inputs .list-group-item.selected .btn-checkbox {
   color: #fff;
+}
+.fa-inputs .list-group-item.selected .btn-checkbox:focus {
+  background: #36a6ef;
+  -webkit-box-shadow: inset -7px 0 55px -18px rgba(0, 0, 0, 0.6);
+  box-shadow: inset -7px 0 55px -18px rgba(0, 0, 0, 0.6);
 }
 .fa-inputs .list-group-item:first-child .btn-checkbox {
   border-top-left-radius: 4px;
@@ -688,7 +696,7 @@ footer .twitter-mod {
 }
 .bootstrap-select .dropdown-menu li.selected a {
   color: #333333;
-  background: #acdaf8;
+  background: #7dc6f5;
 }
 .bootstrap-select.btn-group .btn .caret {
   color: #fff;
