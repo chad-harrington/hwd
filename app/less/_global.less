@@ -570,8 +570,20 @@ footer {
 
 	.validation-status {
 		float: right;
-		margin-top: -26px;
+		margin-top: -25px;
 		margin-right: -20px;
+		.fa {
+			display: none;
+
+			&.fa-frown-o,
+			&.fa-smile-o {
+				display: block;
+			}
+			&.fa-frown-o { color: @state-danger-text; }
+			&.fa-smile-o { color: lighten(@blue, 10%); }
+
+		}
+
 	}
 
 	p {

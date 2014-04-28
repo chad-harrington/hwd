@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hwdApp')
-.controller('ContactCtrl', function ($scope) {
+.controller('ContactCtrl', function ($scope, $http) {
 
 	$scope.interestedServices = [
 		{
@@ -33,9 +33,8 @@ angular.module('hwdApp')
 	$scope.submit = function() {
 		if ($scope.contactForm.$valid) {
 			console.log('sending request to server');
-		} else {
-			
-		}
+			$http.post('http://www.harringtonwebdesign.com/gdform.php', $scope.contactForm);
+		} 
 	};
 
 });

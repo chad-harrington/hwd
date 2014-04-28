@@ -480,8 +480,21 @@ footer .twitter-mod {
 }
 .form-contact .validation-status {
   float: right;
-  margin-top: -26px;
+  margin-top: -25px;
   margin-right: -20px;
+}
+.form-contact .validation-status .fa {
+  display: none;
+}
+.form-contact .validation-status .fa.fa-frown-o,
+.form-contact .validation-status .fa.fa-smile-o {
+  display: block;
+}
+.form-contact .validation-status .fa.fa-frown-o {
+  color: #a94442;
+}
+.form-contact .validation-status .fa.fa-smile-o {
+  color: #36a6ef;
 }
 .form-contact p {
   color: #444;
