@@ -169,6 +169,7 @@ button:focus,
 
 .hwd-nav-drawer {
 	.list-group-item {	
+		padding: 0;
 		font-size: 18px;
 		font-family: 'Architects Daughter';
 		background-color: transparent;
@@ -181,6 +182,8 @@ button:focus,
 
 		a {
 			color: #fff;
+			display: block;
+			padding: 10px 15px;
 
 			&:hover { 
 				text-decoration: none; 
@@ -532,7 +535,7 @@ footer {
 	margin-bottom: 0;
 }
 
-.form {
+.form-contact {
 	padding: 30px;
 	background: #ececec;
 
@@ -554,51 +557,25 @@ footer {
 		resize: vertical;
 	}
 
-	input.text:focus {
-		background-color: #e7efef;
-	}
-
 	select {
 		font-size: 16px;
 		text-indent: 10px;
 		.size(300px, 40px);
 		border: 1px solid #999;
 	}
+	
+	input[type=text][required] {
+		position: relative;
+	}
+
+	.validation-status {
+		float: right;
+		margin-top: -26px;
+		margin-right: -20px;
+	}
 
 	p {
 		color: #444;
-	}
-
-	.account {
-		height: 120px;
-	}
-
-	.personal {
-		height: 680px;
-	}
-
-	.user-info {
-		margin-bottom: 20px;
-
-		label {
-			width: 150px;	
-			display: inline-block;
-			text-align: right;
-			font-size: 20px;
-		}
-
-	}
-
-	.user-questions {
-		label {
-			display: block;
-			line-height: 1.4;
-
-			&[for=service] {
-				margin-bottom: 10px;
-			}
-
-		}
 	}
 
 }

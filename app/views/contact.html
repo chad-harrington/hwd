@@ -20,15 +20,21 @@
 						<div class="col-sm-6">
 							<div class="form-group" data-ng-class="{'has-error': contactForm.userFirst.$invalid && contactForm.userFirst.$dirty}">
 								<label for="userFirst">First Name *</label>
-								<input type="text" name="userFirst" id="userFirst" class="form-control" data-ng-model="user.first" required></input>
-								<p class="help-block" data-ng-show="contactForm.userFirst.$invalid && contactForm.userFirst.$dirty">first name is required</p>
+								<input type="text" name="userFirst" id="userFirst" class="form-control" data-ng-model="user.first" cu-focus required></input>
+								<div class="validation-status">
+									<i class="fa fadeIn animated" data-ng-class="{'fa-frown-o':contactForm.userFirst.$invalid && contactForm.userFirst.$dirty && !contactForm.userFirst.$focused, 'fa-smile-o':contactForm.userFirst.$valid && contactForm.userFirst.$dirty && !contactForm.userFirst.$focused}"></i>
+								</div>
+								<p class="help-block" data-ng-show="contactForm.userFirst.$invalid && contactForm.userFirst.$dirty && !contactForm.userFirst.$focused">first name is required</p>
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group" data-ng-class="{'has-error': contactForm.userLast.$invalid && contactForm.userLast.$dirty}">
 								<label for="userLast">Last Name *</label>
-								<input type="text" name="userLast" id="userLast" class="form-control" data-ng-model="user.last" required>
-								<p class="help-block" data-ng-show="contactForm.userLast.$invalid && contactForm.userLast.$dirty">last name is required</p>
+								<input type="text" name="userLast" id="userLast" class="form-control" data-ng-model="user.last" cu-focus required>
+								<div class="validation-status">
+									<i class="fa" data-ng-class="{'fa-frown-o':contactForm.userLast.$invalid && contactForm.userLast.$dirty && !contactForm.userLast.$focused, 'fa-smile-o':contactForm.userLast.$valid && contactForm.userLast.$dirty && !contactForm.userLast.$focused}"></i>
+								</div>
+								<p class="help-block" data-ng-show="contactForm.userLast.$invalid && contactForm.userLast.$dirty && !contactForm.userLast.$focused">last name is required</p>
 							</div>
 						</div>
 					</div><!-- /.row --> 
@@ -36,14 +42,21 @@
 						<div class="col-sm-6">
 							<div class="form-group" data-ng-class="{'has-error': contactForm.userEmail.$invalid && contactForm.userEmail.$dirty}">
 								<label for="userEmail">Email *</label>
-								<input type="email" name="userEmail" id="userEmail" class="form-control" data-ng-model="user.email" required>
-								<p class="help-block" data-ng-show="contactForm.userEmail.$invalid && contactForm.userEmail.$dirty && contactForm.submitted">wrong email.</p>
+								<input type="email" name="userEmail" id="userEmail" class="form-control" data-ng-model="user.email" cu-focus required>
+								<div class="validation-status">
+									<i class="fa" data-ng-class="{'fa-frown-o':contactForm.userEmail.$invalid && contactForm.userEmail.$dirty && !contactForm.userEmail.$focused, 'fa-smile-o':contactForm.userEmail.$valid && contactForm.userEmail.$dirty && !contactForm.userEmail.$focused}"></i>
+								</div>
+								<p class="help-block" data-ng-show="contactForm.userEmail.$invalid && contactForm.userEmail.$dirty && !contactForm.userEmail.$focused">wrong email.</p>
 							</div>
 						</div>
 						<div class="col-sm-6">
 							<div class="form-group" data-ng-class="{'has-error': contactForm.userPhone.$invalid && contactForm.userPhone.$dirty}">
 								<label for="userPhone">Phone</label>
-								<input type="tel" name="userPhone" id="userPhone" class="form-control" data-ng-model="user.phone" data-ui-mask="(999) 999-9999">
+								<input type="tel" name="userPhone" id="userPhone" class="form-control" data-ng-model="user.phone" data-ui-mask="(999) 999-9999" cu-focus>
+								<div class="validation-status">
+								<i class="fa" data-ng-class="{'fa-frown-o':contactForm.userPhone.$invalid && contactForm.userPhone.$dirty && !contactForm.userPhone.$focused, 'fa-smile-o':contactForm.userPhone.$valid && contactForm.userPhone.$dirty && !contactForm.userPhone.$focused}"></i>
+								</div>
+								<p class="help-block" data-ng-show="contactForm.userPhone.$invalid && contactForm.userPhone.$dirty && !contactForm.userPhone.$focused">wrong phone.</p>
 							</div>
 						</div>
 					</div><!-- /.row --> 
@@ -71,10 +84,8 @@
 									<option value="">please choose one...</option>
 									<option value="5">1 to 5 pages</option>
 									<option value="10">6 to 10 pages</option>
-									<option value="15">11 to 15 pages</option>
-									<option value="20">15 to 20 pages</option>
-									<option value="25">20 to 25 pages</option>
-									<option value="30">30+ pages</option>
+									<option value="15">11 to 20 pages</option>
+									<option value="20">20+ pages</option>
 								</select>
 							</div>
 							<div class="col-sm-6">
@@ -97,7 +108,7 @@
 				</fieldset>
 
 				<div class="btn-wrap text-right">
-					<button class="btn btn-primary btn-3d big btn-submit btn-lg"><span><span>Submit</span></span></button>
+					<button class="btn btn-primary btn-3d big btn-submit btn-lg" data-ng-disabled="contactForm.$invalid"><span><span>Submit</span></span></button>
 				</div>
 
 			</form>

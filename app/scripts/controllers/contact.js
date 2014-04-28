@@ -34,7 +34,7 @@ angular.module('hwdApp')
 		if ($scope.contactForm.$valid) {
 			console.log('sending request to server');
 		} else {
-			$scope.contactFrom.submitted = true;
+			
 		}
 	};
 
