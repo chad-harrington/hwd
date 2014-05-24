@@ -1,7 +1,7 @@
   
 <div class="home-hero">
 	<div class="container">
-		<h1>Updating my site...coming soon?</h1>
+		<h2 class="h1">Updating my site...coming soon?</h2>
 		<div class="row">
 		
 		</div>
@@ -28,11 +28,11 @@
 					<div class="laptop-bg hidden-xs">
 						<img class="img-responsive" src="/images/ui/macbook.png" alt="Macbook Pro">
 					</div>
-					<div id="laptop-carousel" class="carousel slide">
+					<div id="laptop-carousel">
 
 						<carousel interval="slideInterval">
 							<slide data-ng-repeat="slide in slides" active="slide.active">
-								<img data-ng-src="{{slide.img}}" alt="{{slide.imgAlt}}" />
+								<img data-ng-src="{{slide.img}}" alt="{{slide.imgAlt}}" style="margin:auto;" />
 								<div class="carousel-caption">
 									<h3>{{slide.caption}}</h3>
 								</div>

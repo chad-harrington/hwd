@@ -5,10 +5,10 @@
 		<h2>Services</h2>
 
 		<ul class="list-services icons-ul">
-			<li><i class="glyphicon glyphicon-ok"></i>abc</li>
-			<li><i class="glyphicon glyphicon-ok"></i>123</li>
-			<li><i class="glyphicon glyphicon-ok"></i>baby you and me</li>
-			<li><i class="glyphicon glyphicon-ok"></i>girl</li>
+			<li data-ng-repeat="service in services">
+				<i class="glyphicon glyphicon-ok"></i>
+				{{service.name}}
+			</li>
 		</ul>
 
 		<a class="btn btn-primary btn-lg" href="/#/services">read more</a>
@@ -21,13 +21,15 @@
 		
 		<h2>Skills</h2>
 		
-		<ul class="list-skills icons-ul">
-			<li data-ng-repeat="skill in skills">
-				<i class="glyphicon glyphicon-ok"></i>
-				{{skill.type}}
-				
-			</li>
-		</ul>
+		<div data-ng-repeat="skill in skills | filter: { category:'programming' }">
+			<h3>{{skill.category}}</h3>
+			<ul class="list-skills icons-ul">
+				<li data-ng-repeat="item in skill.items">
+					<i class="glyphicon glyphicon-ok"></i>
+					{{item.type}}
+				</li>
+			</ul>
+		</div>
 
 		<div class="rings"></div>
 		
