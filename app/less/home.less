@@ -17,7 +17,7 @@
 	
 	
 
-	h1 {
+	.h1 {
 		color: #fff;
 		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
 	}
@@ -48,6 +48,24 @@
 		
 	}
 
+	.carousel-caption {
+		padding: 0 0 20px 0;
+		left: 0; right: 0;
+		bottom: 0;
+		width: 100%;
+		background: rgba(0, 0, 0, 0.5);
+
+		> h3 {
+			margin-bottom: 4px;
+			margin-top: 10px;
+		}
+
+	}
+	.carousel-indicators {
+		bottom: 3px;
+		margin-bottom: 0;
+	}
+
 }
 
 @media (min-width: @screen-tablet) {
@@ -70,7 +88,7 @@
 		.carousel {
 			.size(495px, 310px);
 			margin: 0 auto;
-			top: 13px; left: 1px;
+			top: 26px; left: 1px;
 		}
 		.carousel-inner > .item > img {
 			height: 310px;
@@ -100,10 +118,47 @@
 		padding: 30px 0;
 	}
 	
+	.laptop {
+		height: 332px;
+		margin-bottom: 30px;
+
+		.laptop-bg {
+			position: absolute;
+			z-index: 0;
+			max-width: 100%;
+		}
+
+		.carousel {
+			.size(425px, 265px);
+			margin: 0 auto;
+			top: 22px; left: 0px;
+		}
+		.carousel-inner > .item > img {
+			height: 265px;
+		}
+	}
 
 
 }
 
 @media (min-width: @screen-lg-desktop) {
+	.laptop {
+		height: 403px;
+		margin-bottom: 30px;
 
+		.laptop-bg {
+			position: absolute;
+			z-index: 0;
+			max-width: 100%;
+		}
+
+		.carousel {
+			.size(518px, 323px);
+			margin: 0 auto;
+			top: 27px; left: 1px;
+		}
+		.carousel-inner > .item > img {
+			height: 322px;
+		}
+	}
 }
