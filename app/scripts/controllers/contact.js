@@ -34,7 +34,7 @@ angular.module('hwdApp')
 		if ($scope.contactForm.$valid) {
 			console.log('sending request to server');
 			$http.post('http://www.harringtonwebdesign.com/gdform.php', $scope.contactForm);
-		} 
+		}
 	};
 
 });
