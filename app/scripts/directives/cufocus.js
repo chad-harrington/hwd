@@ -9,9 +9,9 @@ angular.module('hwdApp')
 			
 			controller.$focused = false;
 
-			element.bind('focus', function(e) {
+			element.bind('focus', function() {
 				scope.$apply( function()	{ controller.$focused = true; } );
-			}).bind('blur', function(e) {
+			}).bind('blur', function() {
 				scope.$apply( function()	{ controller.$focused = false; } );
 			});
 
