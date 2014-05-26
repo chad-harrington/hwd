@@ -10,51 +10,68 @@ angular.module('hwdApp')
 				items: [
 					{
 						type: 'HTML',
-						stars: 4
+						stars: 5,
+						category: 'html'
 					},
 					{
 						type: 'CSS',
-						stars: 4
+						stars: 5,
+						category: 'css'
 					},
 					{
 						type: 'Javascript',
-						stars: 4
+						stars: 4,
+						category: 'javascript'
 					},
 					{
 						type: 'LESS',
-						stars: 4
+						stars: 4,
+						category: 'css'
 					},
 					{
 						type: 'SASS (or SCSS)',
-						stars: 4
+						stars: 4,
+						category: 'css'
 					},
 					{
 						type: 'jQuery',
-						stars: 4
+						stars: 4,
+						category: 'javascript'
+					},
+					{
+						type: 'Angular',
+						stars: 3,
+						category: 'javascript'
 					},
 					{
 						type: 'Backbone',
-						stars: 4
+						stars: 3,
+						category: 'javascript'
 					},
 					{
 						type: 'Underscore',
-						stars: 4
+						stars: 3,
+						category: 'javascript'
 					},
 					{
 						type: 'Git',
-						stars: 4
+						stars: 3,
+						category: 'terminal'
 					},
 					{
 						type: 'Bash/SSH (Terminal)',
-						stars: 4
+						stars: 3,
+						category: 'terminal'
 					},
 					{
 						type: 'PHP',
-						stars: 4
+						stars: 3,
+						category: 'php'
 					},
 					{
 						type: '.NET',
-						stars: 4
+						stars: 2,
+						category: '.net'
 					}
 				]
 			},
@@ -97,6 +114,27 @@ angular.module('hwdApp')
 					{
 						type: 'TextExpander'
 					}
+				]
+			},
+			{
+				category: 'interpersonal',
+				items: [
+					{
+						type: 'team-oriented worker'
+					},
+					{
+						type: 'proactive leader'
+					},
+					{
+						type: 'active listener'
+					},
+					{
+						type: 'problem solver'
+					},
+					{
+						type: 'love to learn'
+					}
+
 				]
 			}
 		];

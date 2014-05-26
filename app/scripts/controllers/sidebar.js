@@ -1,43 +1,28 @@
 'use strict';
 
 angular.module('hwdApp')
-.controller('SidebarCtrl', function ($scope) {
-	$scope.skills = [
-		{
-			type: 'html',
-			stars: 5
-		},
-		{
-			type: 'css',
-			stars: 5
-		},
-		{
-			type: 'javascript',
-			stars: 4
-		},
-		{
-			type: 'angular',
-			stars: 4
-		},
-		{
-			type: 'jquery',
-			stars: 4
-		},
-		{
-			type: 'bash scripting',
-			stars: 3.5
-		},
-		{
-			type: 'yeoman',
-			stars: 3
-		},
-		{
-			type: 'git',
-			stars: 3
-		},
-		{
-			type: 'photoshop',
-			stars: 4
-		}
+.controller('SidebarCtrl', function ($scope, Skills, Services) {
+	
+	// Get data from services
+	$scope.services = Services.query();
+	$scope.skills = Skills.query();
+
+	$scope.rate = 3;
+	$scope.max = 5;
+	$scope.isReadonly = true;
+
+	$scope.hoveringOver = function(value) {
+		$scope.overStar = value;
+		$scope.percent = 100 * (value / $scope.max);
+	};
+
+	
+	$scope.ratingStates = [
+		{stateOn: 'glyphicon-ok-sign', stateOff: 'glyphicon-ok-circle'},
+		{stateOn: 'glyphicon-star', stateOff: 'glyphicon-star-empty'},
+		{stateOn: 'glyphicon-heart', stateOff: 'glyphicon-ban-circle'},
+		{stateOn: 'glyphicon-heart'},
+		{stateOff: 'glyphicon-off'}
 	];
+
 });

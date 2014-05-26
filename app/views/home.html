@@ -44,10 +44,18 @@
 				</div><!-- /.laptop -->
 			</div>
 
-			<div class="testimonial">
+			<div class="testimonials">
 				<h2>Testimonials</h2>
-				<p>&quot;I have never worked with someone who is so professional and reliable! Chad displayed such a high level of concern and gratitude when completing my projects by my requested deadline! I would recommend Chad for any project.&quot;<span class="test_name">~ Dorothy Schaller</span></p>
-				<a href="testimonials.html">More testimonials</a>
+				<carousel interval="slideInterval">
+					<slide data-ng-repeat="testimonial in testimonials" active="testimonial.active">
+						<div class="testimonial">
+							<blockquote class="text-left">
+								<p><span class="fa fa-quote-left"></span> {{testimonial.quote}} <span class="fa fa-quote-right"></span></p>
+								<p class="author">{{testimonial.author}}</p>
+							</blockquote>
+						</div>
+					</slide>
+				</carousel>
 			</div> <!-- End .testimonial -->
 		
 		</div> <!-- /.main.col-md-8 -->

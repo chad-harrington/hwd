@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hwdApp')
-.controller('HomeCtrl', function ($scope, Skills, Services) {
+.controller('HomeCtrl', function ($scope, Testimonials) {
 	
 	// Slider
 	$scope.slideInterval = 10000;
@@ -12,9 +12,9 @@ angular.module('hwdApp')
 		{ img: 'images/portfolio/vic_folio_slide_3.jpg', imgAlt: 'image alt', caption: 'caption 4'}
 	];
 
-	// Services
-	$scope.services = Services.query();
-	$scope.skills = Skills.query();
+	$scope.testimonials = Testimonials.query();
+
+
 
 
 });

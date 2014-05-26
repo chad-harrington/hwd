@@ -1,4 +1,4 @@
-<aside id="sidebar">
+<aside id="sidebar" data-ng-controller="SidebarCtrl">
 
 	<div class="panel notepad">
 		
@@ -21,15 +21,28 @@
 		
 		<h2>Skills</h2>
 		
-		<div data-ng-repeat="skill in skills | filter: { category:'programming' }">
-			<h3>{{skill.category}}</h3>
-			<ul class="list-skills icons-ul">
-				<li data-ng-repeat="item in skill.items">
-					<i class="glyphicon glyphicon-ok"></i>
-					{{item.type}}
-				</li>
-			</ul>
-		</div>
+		<tabset type="tabs">
+			
+			<tab ng-repeat="skill in skills" heading="{{skill.category}}" active="skill.active">
+				<ul class="list-skills icons-ul">
+					<li data-ng-repeat="item in skill.items">
+						<div class="row">
+							<div class="col-xs-12 col-sm-4 col-md-12">
+								{{item.type}}								
+							</div>
+							<div class="col-xs-12 col-sm-8 col-md-12">
+								<div class="skill-rating" data-ng-if="item.stars">
+									<rating ng-model="item.stars" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+		    						<span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+								</div>		
+							</div>
+						</div>
+						
+					</li>
+				</ul>
+			</tab>
+			
+		</tabset>
 
 		<div class="rings"></div>
 		
