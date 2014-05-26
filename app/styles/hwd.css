@@ -197,7 +197,7 @@ button:focus,
 }
 .testimonials {
   margin-bottom: 20px;
-  padding: 40px 35px;
+  padding: 30px 25px;
   position: relative;
   border: 4px solid #000;
   border-radius: 8px;
@@ -218,16 +218,45 @@ button:focus,
 .testimonials a:hover {
   color: #000;
 }
-.testimonials span.test_name {
-  display: block;
-  font-weight: bold;
-  text-align: left;
-  margin: 8px 0 0 20px;
+.testimonials .carousel > .carousel-indicators {
+  bottom: -15px;
+  margin-bottom: 0;
 }
-.testimonials img {
-  position: absolute;
-  right: 230px;
-  top: 30px;
+.testimonials .carousel > .carousel-indicators li {
+  margin-left: 3px;
+  margin-right: 3px;
+  width: 20px;
+  height: 20px;
+  border-color: #333333;
+}
+.testimonials .carousel > .carousel-indicators .active {
+  background: #333333;
+}
+.testimonials .carousel > .carousel-control {
+  width: 30px;
+  height: 30px;
+  top: -35px;
+  opacity: 1;
+  background-image: none;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.testimonials .carousel > .carousel-control > .glyphicon {
+  cursor: pointer;
+  margin: 0;
+  position: static;
+  opacity: 1;
+}
+.testimonials .carousel > .carousel-control.left {
+  left: auto;
+  right: 50px;
+}
+.testimonials .carousel > .carousel-control.right {
+  top: -36px;
+}
+.testimonials .carousel blockquote {
+  border-left: 0;
 }
 .quote-entry blockquote {
   font-style: italic;
