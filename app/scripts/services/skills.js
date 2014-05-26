@@ -117,7 +117,7 @@ angular.module('hwdApp')
 				]
 			},
 			{
-				category: 'interpersonal',
+				category: 'personal',
 				items: [
 					{
 						type: 'team-oriented worker'
