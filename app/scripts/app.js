@@ -1,11 +1,19 @@
 'use strict';
 
+var lodash = angular.module('lodash', []);
+lodash.factory('_', function() {
+	// assumes lodash has already been loaded on the page
+	return window._;
+});
+
+
 angular.module('hwdApp', [
 	'ui.bootstrap',
 	'ui.utils',
 	'ui.map',
 	'ngResource',
 	'ngRoute',
+	'lodash',
 	'snap'
 ])
 .config(function ($routeProvider) {
