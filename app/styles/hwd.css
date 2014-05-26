@@ -201,7 +201,7 @@ button:focus,
   position: relative;
   border: 4px solid #000;
   border-radius: 8px;
-  background: #cccccc url(/images/ui/buildings.png) no-repeat center -10px;
+  background: #cccccc url(/images/ui/buildings.png) no-repeat center 30px;
 }
 .testimonials h2 {
   color: #333;
