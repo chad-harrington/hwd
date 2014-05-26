@@ -11,67 +11,67 @@ angular.module('hwdApp')
 					{
 						type: 'HTML',
 						stars: 5,
-						category: 'html'
+						tags: 'html'
 					},
 					{
 						type: 'CSS',
 						stars: 5,
-						category: 'css'
+						tags: 'css'
 					},
 					{
 						type: 'Javascript',
 						stars: 4,
-						category: 'javascript'
+						tags: 'javascript'
 					},
 					{
 						type: 'LESS',
 						stars: 4,
-						category: 'css'
+						tags: 'css'
 					},
 					{
 						type: 'SASS (or SCSS)',
 						stars: 4,
-						category: 'css'
+						tags: 'css'
 					},
 					{
 						type: 'jQuery',
 						stars: 4,
-						category: 'javascript'
+						tags: 'javascript'
 					},
 					{
 						type: 'Angular',
 						stars: 3,
-						category: 'javascript'
+						tags: 'javascript'
 					},
 					{
 						type: 'Backbone',
 						stars: 3,
-						category: 'javascript'
+						tags: 'javascript'
 					},
 					{
 						type: 'Underscore',
 						stars: 3,
-						category: 'javascript'
+						tags: 'javascript'
 					},
 					{
 						type: 'Git',
 						stars: 3,
-						category: 'terminal'
+						tags: 'terminal'
 					},
 					{
 						type: 'Bash/SSH (Terminal)',
 						stars: 3,
-						category: 'terminal'
+						tags: 'terminal'
 					},
 					{
 						type: 'PHP',
 						stars: 3,
-						category: 'php'
+						tags: 'php'
 					},
 					{
 						type: '.NET',
 						stars: 2,
-						category: '.net'
+						tags: '.net'
 					}
 				]
 			},
