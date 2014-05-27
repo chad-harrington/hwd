@@ -320,6 +320,12 @@ button:focus,
   padding: 0;
   list-style: none;
 }
+.panel.notepad .list-services li {
+  padding-left: 50px;
+}
+.panel.notepad .list-services li .glyphicon-ok {
+  margin-left: -50px;
+}
 .panel.notepad li {
   margin-bottom: 15px;
   line-height: 1.3;
