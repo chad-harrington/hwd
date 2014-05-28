@@ -718,6 +718,53 @@ footer {
 
 }
 
+.input-group-datepicker {
+	.dropdown-menu {
+		padding: 10px;
+	}
+	
+	thead {
+		th:first-child,
+		th:last-child {
+			button {
+				color: #fff;
+				border-color: lighten(@blue, 10%);
+				background-color: lighten(@blue, 10%);
+
+				&:hover {
+					border-color: lighten(@blue, 10%);
+				}
+
+			}
+		}
+	}
+
+	tbody {
+		border: 1px solid #dadada;
+		border-collapse: separate;
+		button {
+			border-radius: 0;
+			
+			&.btn-info,
+			&.active,
+			&:hover { 
+				background-color: lighten(@blue, 10%);
+				span {
+					color: #fff; 
+				}
+			}
+			
+			&.btn-default[disabled] {
+				background: #e4e4e4;
+			}
+
+		}
+
+		
+	}
+
+}
+
 .folio_block {
 	margin: 20px 0;
 	float: left;

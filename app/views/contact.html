@@ -120,10 +120,10 @@
 								<p class="help-block" data-ng-show="contactForm.userPhone.$invalid && contactForm.userPhone.$dirty && !contactForm.userPhone.$focused">wrong phone.</p>
 							</div>
 							<div class="form-group">
-								<p class="input-group">
-									<input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+								<p class="input-group input-group-datepicker">
+									<input type="text" class="form-control" datepicker-popup="{{format}}" datepicker-mode="month" ng-model="dt" is-open="opened" min-date="minDate" max-date="'2015-06-22'" datepicker-options="dateOptions" show-button-bar="false" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
 									<span class="input-group-btn">
-										<button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+										<button type="button" class="btn btn-primary" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
 					              </span>
 					            </p>
 							</div>

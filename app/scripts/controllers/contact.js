@@ -53,8 +53,11 @@ angular.module('hwdApp')
 	};
 
 	$scope.dateOptions = {
+		formatDay: 'd',
+		maxMode: 'day',
 		formatYear: 'yy',
-		startingDay: 1
+		showWeeks: false,
+		startingDay: 0
 	};
 
 	$scope.initDate = new Date('2016-15-20');

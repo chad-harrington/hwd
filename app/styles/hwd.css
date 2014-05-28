@@ -594,6 +594,39 @@ footer .twitter-mod {
 .form-contact p {
   color: #444;
 }
+.input-group-datepicker .dropdown-menu {
+  padding: 10px;
+}
+.input-group-datepicker thead th:first-child button,
+.input-group-datepicker thead th:last-child button {
+  color: #fff;
+  border-color: #36a6ef;
+  background-color: #36a6ef;
+}
+.input-group-datepicker thead th:first-child button:hover,
+.input-group-datepicker thead th:last-child button:hover {
+  border-color: #36a6ef;
+}
+.input-group-datepicker tbody {
+  border: 1px solid #dadada;
+  border-collapse: separate;
+}
+.input-group-datepicker tbody button {
+  border-radius: 0;
+}
+.input-group-datepicker tbody button.btn-info,
+.input-group-datepicker tbody button.active,
+.input-group-datepicker tbody button:hover {
+  background-color: #36a6ef;
+}
+.input-group-datepicker tbody button.btn-info span,
+.input-group-datepicker tbody button.active span,
+.input-group-datepicker tbody button:hover span {
+  color: #fff;
+}
+.input-group-datepicker tbody button.btn-default[disabled] {
+  background: #e4e4e4;
+}
 .folio_block {
   margin: 20px 0;
   float: left;
