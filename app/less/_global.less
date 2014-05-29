@@ -719,6 +719,11 @@ footer {
 }
 
 .input-group-datepicker {
+	
+	button:focus {
+		outline: 0;
+	}
+
 	.dropdown-menu {
 		padding: 10px;
 	}
@@ -728,7 +733,6 @@ footer {
 		th:last-child {
 			button {
 				color: #fff;
-				border-color: lighten(@blue, 10%);
 				background-color: lighten(@blue, 10%);
 
 				&:hover {
@@ -745,7 +749,7 @@ footer {
 		button {
 			border-radius: 0;
 			
-			&.btn-info,
+			&.btn-infodrop,
 			&.active,
 			&:hover { 
 				background-color: lighten(@blue, 10%);
@@ -761,6 +765,14 @@ footer {
 		}
 
 		
+	}
+
+	.input-group-btn {
+		button {
+			background-color: lighten(@blue, 10%);
+			border-color: lighten(@blue, 10%);
+
+		}
 	}
 
 }
