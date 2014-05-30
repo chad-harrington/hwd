@@ -5,46 +5,46 @@
 
 			<h3>Education</h3>
 			<ul class="list-unstyled">
-				<li>California State Polytechnic University, Pomona</li>
-				<li>Bachelor of Science in Business Administration</li>
-				<li>Emphasis in Computer Information Systems</li>
-				<li>Graduated: Winter 2008</li>
+				<li data-ng-bind="Chad.education.school"></li>
+				<li data-ng-bind="Chad.education.degree"></li>
+				<li data-ng-bind="Chad.education.emphasis"></li>
+				<li>Graduated: <span data-ng-bind="Chad.education.graduated"></span></li>
 			</ul>
+			
+			<div class="panel notepad">
+				<h3>Skills</h3>
+			
+				<tabset type="tabs">
+				
+					<tab ng-repeat="skill in Chad.skills" active="skill.active">
+						<tab-heading class="tab-heading" tooltip="{{skill.category}}" tooltip-placement="bottom" tooltip-popup-delay="1500">
+							<span class="fa" data-ng-class="{'fa-code': skill.category == 'programming', 'fa-terminal': skill.category == 'software', 'fa-group': skill.category == 'personal' }"></span>
+							<span class="tab-heading-text">
+								{{skill.category}}	
+							</span>
+							
+						</tab-heading>
+						<ul class="list-skills icons-ul">
+							<li data-ng-repeat="item in skill.items">
+								<div class="row">
+									<div class="col-xs-12 col-md-12" data-ng-class="{'col-sm-12': item.hasOwnProperty('stars'), 'col-sm-4': item.hasOwnProperty('stars')}">
+										{{item.type}}								
+									</div>
+									<div class="col-xs-12 col-md-12">
+										<div class="skill-rating" data-ng-if="item.stars">
+											<rating ng-model="item.stars" max="max" readonly="isReadonly" on-hover="hoveringOver(value)" on-leave="overStar = null"></rating>
+				    						<span class="label" ng-class="{'label-warning': percent<30, 'label-info': percent>=30 && percent<70, 'label-success': percent>=70}" ng-show="overStar && !isReadonly">{{percent}}%</span>
+										</div>		
+									</div>
+								</div>
+								
+							</li>
+						</ul>
+					</tab>
+					
+				</tabset>	
+			</div>
 
-			<h3>Skills</h3>
-			<h4>Programming</h4>
-			<ul class="list-unstyled">
-				<li>HTML</li>
-				<li>CSS, LESS, SASS (or SCSS)</li>
-				<li>JavaScript</li>
-				<li>Angular</li>
-				<li>jQuery</li>
-				<li>Backbone</li>
-				<li>Underscore (or LoDash)</li>
-				<li>Bash (Terminal)</li>
-				<li>Yeoman</li>
-				<li>Grunt</li>
-				<li></li>
-				<li>Git (Github)</li>
-				<li>PHP</li>
-				<li>.NET</li>
-			</ul>
-			<h4>Software</h4>
-			<ul class="list-unstyled">
-				<li>Sublime Text</li>
-				<li>Terminal</li>
-				<li>Kaleidoscope</li>
-				<li>Photoshop</li>
-				<li>Slicy</li>
-				<li>Tower</li>
-				<li>Transmit</li>
-				<li>CodeKit</li>
-				<li>Visual Studio</li>
-				<li>Alfred</li>
-				<li>TextExpander</li>
-				<li>Fireworks</li>
-				<li>Illustrator</li>
-			</ul>
 
 			<h3>Hobbies</h3>
 			<ul class="list-unstyled">
