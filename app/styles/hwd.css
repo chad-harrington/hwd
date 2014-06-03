@@ -190,12 +190,18 @@ button:focus,
   -ms-transform: rotate(540deg);
   transform: rotate(540deg);
 }
-.main h2 {
-  color: #F60;
-  font-size: 2em;
-  font-weight: bold;
-  font-family: 'Roboto Condensed';
-  margin-top: 0;
+div[data-ng-view] > section.container {
+  background: #fff;
+}
+.hdr {
+  color: #2a2c30;
+  font-family: "Oswald", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: normal;
+  text-shadow: 0 4px 0 #d4dce2;
+}
+.page-title {
+  font-size: 60px;
+  margin-bottom: 20px;
 }
 .testimonials {
   margin-bottom: 20px;

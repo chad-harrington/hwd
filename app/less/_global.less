@@ -4,6 +4,7 @@
 // colors
 @white: #fff;
 @red: red;
+@green: 0da16c;
 @blue: #128fe0;
 @blue2: #1a69a2;
 @grad-blue-bottom: @blue2;
@@ -246,16 +247,21 @@ button:focus,
 	}
 }
 
-.main {
+div[data-ng-view] > section.container {
+	background: #fff;
+}
 
-	h2 {
-		color: #F60;
-		font-size: 2em;
-		font-weight: bold;
-		font-family: 'Roboto Condensed';
-		margin-top: 0;
-	}
 
+.hdr {
+	color: #2a2c30;
+	font-family: "Oswald", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-weight: normal;
+	text-shadow: 0 4px 0 #d4dce2;
+}
+
+.page-title {
+	font-size: 60px;
+	margin-bottom: 20px;
 }
 
 .testimonials {
