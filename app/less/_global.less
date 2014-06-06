@@ -4,7 +4,8 @@
 // colors
 @white: #fff;
 @red: red;
-@green: 0da16c;
+@green: #20c069;
+@green2: #18ac5c;
 @blue: #128fe0;
 @blue2: #1a69a2;
 @grad-blue-bottom: @blue2;
@@ -17,7 +18,7 @@ body {
 	position: relative;
 	min-height: 100%;
 	background: #d8d8d8;
-	// background: url(/images/ui/bg/mooning-bg.jpg) repeat 0 0;
+	background: url(/images/ui/bg/bright-squares.jpg) repeat 0 0;
 }
 //html,body {overflow:auto;}
 a:focus,
@@ -32,7 +33,7 @@ button:focus,
 	padding-top: 60px;
 	position: relative;
 	background: #d8d8d8;
-	// background: url(/images/ui/bg/mooning-bg.jpg) repeat 0 0;
+	background: url(/images/ui/bg/bright-squares.png) repeat 0 0;
 }
 
 .header.navbar {
@@ -48,11 +49,13 @@ button:focus,
 	.logo { 
 		float: left; 
 		margin: 0;
+		margin-right: 35px;
 		.clearfix();
 	}
 	
 	.navbar-brand {
-		font-family: 'Roboto Condensed';
+		color: @gray;
+		font-family: 'Oswald';
 		font-weight: bold;
 		font-size: 28px;
 		line-height: 1;
@@ -67,7 +70,7 @@ button:focus,
 		}
 		
 		&:hover {
-			color: lighten(@blue, 5%);
+			color: lighten(@green, 5%);
 		}
 
 	}
@@ -101,10 +104,10 @@ button:focus,
 			background-color: #fff;
 
 			.icon-bar {
-				background-color: lighten(@blue,5%);
+				background-color: lighten(@green,5%);
 			}
 			.drawer-close {
-				color: lighten(@blue, 5%);
+				color: lighten(@green, 5%);
 			}
 
 		}
@@ -127,30 +130,10 @@ button:focus,
 		font-size: 1.2em;
 		border-bottom: 1px solid #E6E6E6;
 		
-		a { font-family: 'Architects Daughter'; }
-
-		&.home 				{  }	
-		&.about 			{  }
-		&.services 			{  }
-		&.portfolio 		{  }
-		&.testimonials 		{  }
-		&.contact 			{  }
-
-		// default 
-		&.home a 			{  }
-		&.about a 			{  }
-		&.services a 		{  }
-		&.portfolio a 		{  }
-		&.testimonials a 	{  }
-		&.contact a 		{  }
-
-		// hover 
-		&.home a:hover {  }
-		&.about a:hover {  }
-		&.services a:hover {  }
-		&.portfolio a:hover {  }
-		&.testimonials a:hover {  }
-		&.contact a:hover {  }
+		a { 
+			color: #5d6370;
+			font-family: "Oswald","Franklin Gothic Medium","Arial Narrow",Arial,sans-serif; 
+		}
 
 	}
 
@@ -220,7 +203,7 @@ button:focus,
 		}
 		
 		&.active {
-			background: @blue;
+			background: @green;
 			a {
 				color: #fff;
 			}
@@ -249,6 +232,9 @@ button:focus,
 
 div[data-ng-view] > section.container {
 	background: #fff;
+	padding-bottom: 20px;
+	-mox-box-shadow: 0 0px 15px 3px rgba(0,0,0,0.25);
+	box-shadow: 0 0px 15px 3px rgba(0,0,0,0.25);
 }
 
 
@@ -262,6 +248,10 @@ div[data-ng-view] > section.container {
 .page-title {
 	font-size: 60px;
 	margin-bottom: 20px;
+}
+
+.carousel-control {
+	cursor: pointer;
 }
 
 .testimonials {
@@ -447,19 +437,24 @@ div[data-ng-view] > section.container {
 	}
 
 	.nav-tabs {
+		background: #3b3e44;
 		margin-bottom: 20px;
+		#gradient > .vertical(@start-color: #3b3e44; @end-color: #2a2c30);
+
 		> li {
-			margin-bottom: -1px;
+			margin-bottom: 0;
 			width: 33.3333%;
 			a {
 				cursor: pointer;
-				color: @text-color;
+				color: #fff;
 				font-size: 16px;
 				text-transform: uppercase;
 				text-align: center;
 				font-family: Arial, Helvetica, sans-serif;
 				margin-right: 0;
 				padding: 7px 5px;
+				border-right: 1px solid #464646;
+				border-radius: 0;
 
 				.fa {
 					color: #fff;
@@ -474,16 +469,27 @@ div[data-ng-view] > section.container {
 					display: block;
 				}
 
+				&:hover {
+					background: @green;
+					border-color: @green2;
+
+					.fa {
+						background: @green;
+					}
+
+				}
+
 			} 
 
 			&.active {
+				background: @green;
+
 				> a {
-					color: lighten(@blue, 10%);	
-					// border-color: lighten(@blue, 10%);
-					border-bottom-color: #fff;
+					background: none;
+					border-color: transparent;
 
 					.fa {
-						background: lighten(@blue, 10%);
+						background: @green;
 					}
 
 				}
@@ -516,7 +522,6 @@ div[data-ng-view] > section.container {
 
 footer {
 	color: #fff;
-	margin-top: 20px;
 	background: @gray-dark;
 
 	h3 {
@@ -712,7 +717,7 @@ footer {
 				display: block;
 			}
 			&.fa-frown-o { color: @state-danger-text; }
-			&.fa-smile-o { color: lighten(@blue, 10%); }
+			&.fa-smile-o { color: @green; }
 
 		}
 
@@ -739,10 +744,10 @@ footer {
 		th:last-child {
 			button {
 				color: #fff;
-				background-color: lighten(@blue, 10%);
+				background-color: @green;
 
 				&:hover {
-					border-color: lighten(@blue, 10%);
+					border-color: @green;
 				}
 
 			}
@@ -758,7 +763,7 @@ footer {
 			&.btn-infodrop,
 			&.active,
 			&:hover { 
-				background-color: lighten(@blue, 10%);
+				background-color: @green;
 				span {
 					color: #fff; 
 				}
@@ -775,8 +780,8 @@ footer {
 
 	.input-group-btn {
 		button {
-			background-color: lighten(@blue, 10%);
-			border-color: lighten(@blue, 10%);
+			background-color: @green;
+			border-color: @green;
 
 		}
 	}
@@ -963,19 +968,19 @@ footer {
 			}
 
 			&:focus {
-				background: lighten(@blue, 25%);
+				background: @green;
 			}
 			
 		}
 
 		&.selected {
 			
-			background: lighten(@blue, 10%);
+			background: @green;
 			.btn-checkbox {
 				color: #fff;
 				
 				&:focus {
-					background: lighten(@blue, 10%);
+					background: @green;
 					.box-shadow(inset -7px 0 55px -18px rgba(0, 0, 0, 0.6));
 				}
 
@@ -1002,29 +1007,35 @@ footer {
 
 /* Custom select/dropdown - overrides bootstrap-select.css */
 .bootstrap-select {
-	
+	font-family: "Oswald";
 	.btn {
-		padding-right: 50px;
+		color: #fff;
+		padding: 0 50px 0 10px;
+		background: #6b6e74;
+		font-weight: 200;
+		font-size: 18px;
+		line-height: 45px;
+
 		&:hover, &:focus {
-			background-color: #fff;
-			border: 1px solid lighten(@blue, 10%);
+			background-color: lighten(#6b6e74, 5%);
 		}
 		&:focus { outline: 0 !important }
 		&:active { .box-shadow(none); }
 	}
 	
 	.dropdown-menu {
-		
+
+		background: #6b6e74;
 		li {
 			
 			> a {
-			
-				&:hover, &:focus { color: #fff; background: lighten(@blue, 10%); }
+				color: #fff;
+				&:hover, &:focus { color: #fff; background: @green; }
 			}
 			
 			&.selected a {
 				color: @text-color;
-				background: lighten(@blue, 25%);
+				background: lighten(@green, 25%);
 			}	
 			
 
@@ -1040,14 +1051,13 @@ footer {
 			.caret {
 				color: #fff;
 				width: 40px;
-				height: 34px;
+				line-height: 45px;
 				border: none;
 				margin: 0;
 				position: absolute;
 				top: -1px; right: -1px;
 				border-top-right-radius: 4px;
 				border-bottom-right-radius: 4px;
-				background: lighten(@blue, 10%);
 
 				&:after {
 					font-family: FontAwesome;
@@ -1061,7 +1071,8 @@ footer {
 
 	&.open {
 		.dropdown-toggle.btn {
-			background: #fff;
+			color: #fff;
+			background-color: lighten(#6b6e74, 5%);
 		}
 	}
 
@@ -1147,11 +1158,15 @@ footer {
 				text-align: center;
 				border-bottom: 0;
 				height: 85px;
+				width: 100px;
+				border-right: 1px solid #dfe3eb;
+				
+				&:last-child { border-right: 0; }
 
 				> a {
 					padding-bottom: 0;
 					height: 100%;
-					
+					color: @gray;
 
 					span,i {
 						-webkit-transition: all 0.5s ease;
@@ -1164,7 +1179,7 @@ footer {
 					}
 
 					&:hover {
-						color: lighten(@blue,10%);
+						color: @green;
 						span,i {
 							top: -4px;
 						}
@@ -1173,11 +1188,12 @@ footer {
 				}
 				
 				&.active > a {
-					color: @gray-dark;
+					color: #fff;
+					background-color: @green;
 					span,i {top: -4px;}
 					&:hover {
-						color: @gray-dark;
-						
+						color: #fff;
+						background-color: @green;
 					}
 				}
 

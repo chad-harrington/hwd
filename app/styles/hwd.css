@@ -7,6 +7,7 @@ body {
   position: relative;
   min-height: 100%;
   background: #d8d8d8;
+  background: url(/images/ui/bg/bright-squares.jpg) repeat 0 0;
 }
 a:focus,
 button:focus,
@@ -19,6 +20,7 @@ button:focus,
   padding-top: 60px;
   position: relative;
   background: #d8d8d8;
+  background: url(/images/ui/bg/bright-squares.png) repeat 0 0;
 }
 .header.navbar {
   margin-bottom: 0;
@@ -30,6 +32,7 @@ button:focus,
 .hwd-navbar .logo {
   float: left;
   margin: 0;
+  margin-right: 35px;
 }
 .hwd-navbar .logo:before,
 .hwd-navbar .logo:after {
@@ -40,7 +43,8 @@ button:focus,
   clear: both;
 }
 .hwd-navbar .navbar-brand {
-  font-family: 'Roboto Condensed';
+  color: #555555;
+  font-family: 'Oswald';
   font-weight: bold;
   font-size: 28px;
   line-height: 1;
@@ -55,7 +59,7 @@ button:focus,
   font-family: 'Architects Daughter';
 }
 .hwd-navbar .navbar-brand:hover {
-  color: #1f9ced;
+  color: #24d675;
 }
 .hwd-navbar .navbar-toggle {
   float: left;
@@ -89,11 +93,11 @@ button:focus,
 }
 .hwd-navbar .navbar-toggle:hover .icon-bar,
 .hwd-navbar .navbar-toggle:focus .icon-bar {
-  background-color: #1f9ced;
+  background-color: #24d675;
 }
 .hwd-navbar .navbar-toggle:hover .drawer-close,
 .hwd-navbar .navbar-toggle:focus .drawer-close {
-  color: #1f9ced;
+  color: #24d675;
 }
 .sitenav .nav-icon {
   margin-right: 10px;
@@ -107,7 +111,8 @@ button:focus,
   border-bottom: 1px solid #E6E6E6;
 }
 .sitenav li a {
-  font-family: 'Architects Daughter';
+  color: #5d6370;
+  font-family: "Oswald", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .snap-drawers {
   background: #222;
@@ -173,7 +178,7 @@ button:focus,
   border-radius: 0;
 }
 .hwd-nav-drawer .list-group-item.active {
-  background: #128fe0;
+  background: #20c069;
 }
 .hwd-nav-drawer .list-group-item.active a {
   color: #fff;
@@ -192,6 +197,9 @@ button:focus,
 }
 div[data-ng-view] > section.container {
   background: #fff;
+  padding-bottom: 20px;
+  -mox-box-shadow: 0 0px 15px 3px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0px 15px 3px rgba(0, 0, 0, 0.25);
 }
 .hdr {
   color: #2a2c30;
@@ -202,6 +210,9 @@ div[data-ng-view] > section.container {
 .page-title {
   font-size: 60px;
   margin-bottom: 20px;
+}
+.carousel-control {
+  cursor: pointer;
 }
 .testimonials {
   margin-bottom: 20px;
@@ -346,21 +357,28 @@ div[data-ng-view] > section.container {
   margin-right: 15px;
 }
 .panel.notepad .nav-tabs {
+  background: #3b3e44;
   margin-bottom: 20px;
+  background-image: -webkit-linear-gradient(top, #3b3e44 0%, #2a2c30 100%);
+  background-image: linear-gradient(to bottom, #3b3e44 0%, #2a2c30 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3b3e44', endColorstr='#ff2a2c30', GradientType=0);
 }
 .panel.notepad .nav-tabs > li {
-  margin-bottom: -1px;
+  margin-bottom: 0;
   width: 33.3333%;
 }
 .panel.notepad .nav-tabs > li a {
   cursor: pointer;
-  color: #333333;
+  color: #fff;
   font-size: 16px;
   text-transform: uppercase;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
   margin-right: 0;
   padding: 7px 5px;
+  border-right: 1px solid #464646;
+  border-radius: 0;
 }
 .panel.notepad .nav-tabs > li a .fa {
   color: #fff;
@@ -373,12 +391,22 @@ div[data-ng-view] > section.container {
 .panel.notepad .nav-tabs > li a .tab-heading-text {
   display: block;
 }
+.panel.notepad .nav-tabs > li a:hover {
+  background: #20c069;
+  border-color: #18ac5c;
+}
+.panel.notepad .nav-tabs > li a:hover .fa {
+  background: #20c069;
+}
+.panel.notepad .nav-tabs > li.active {
+  background: #20c069;
+}
 .panel.notepad .nav-tabs > li.active > a {
-  color: #36a6ef;
-  border-bottom-color: #fff;
+  background: none;
+  border-color: transparent;
 }
 .panel.notepad .nav-tabs > li.active > a .fa {
-  background: #36a6ef;
+  background: #20c069;
 }
 .panel.notepad .list-skills {
   padding: 20px;
@@ -391,7 +419,6 @@ div[data-ng-view] > section.container {
 }
 footer {
   color: #fff;
-  margin-top: 20px;
   background: #333333;
 }
 footer h3 {
@@ -595,7 +622,7 @@ footer .twitter-mod {
   color: #a94442;
 }
 .form-contact .validation-status .fa.fa-smile-o {
-  color: #36a6ef;
+  color: #20c069;
 }
 .form-contact p {
   color: #444;
@@ -609,11 +636,11 @@ footer .twitter-mod {
 .input-group-datepicker thead th:first-child button,
 .input-group-datepicker thead th:last-child button {
   color: #fff;
-  background-color: #36a6ef;
+  background-color: #20c069;
 }
 .input-group-datepicker thead th:first-child button:hover,
 .input-group-datepicker thead th:last-child button:hover {
-  border-color: #36a6ef;
+  border-color: #20c069;
 }
 .input-group-datepicker tbody {
   border: 1px solid #dadada;
@@ -625,7 +652,7 @@ footer .twitter-mod {
 .input-group-datepicker tbody button.btn-infodrop,
 .input-group-datepicker tbody button.active,
 .input-group-datepicker tbody button:hover {
-  background-color: #36a6ef;
+  background-color: #20c069;
 }
 .input-group-datepicker tbody button.btn-infodrop span,
 .input-group-datepicker tbody button.active span,
@@ -636,8 +663,8 @@ footer .twitter-mod {
   background: #e4e4e4;
 }
 .input-group-datepicker .input-group-btn button {
-  background-color: #36a6ef;
-  border-color: #36a6ef;
+  background-color: #20c069;
+  border-color: #20c069;
 }
 .folio_block {
   margin: 20px 0;
@@ -791,16 +818,16 @@ footer .twitter-mod {
   border: 1px solid #dddddd;
 }
 .fa-inputs .list-group-item .btn-checkbox:focus {
-  background: #7dc6f5;
+  background: #20c069;
 }
 .fa-inputs .list-group-item.selected {
-  background: #36a6ef;
+  background: #20c069;
 }
 .fa-inputs .list-group-item.selected .btn-checkbox {
   color: #fff;
 }
 .fa-inputs .list-group-item.selected .btn-checkbox:focus {
-  background: #36a6ef;
+  background: #20c069;
   -webkit-box-shadow: inset -7px 0 55px -18px rgba(0, 0, 0, 0.6);
   box-shadow: inset -7px 0 55px -18px rgba(0, 0, 0, 0.6);
 }
@@ -813,13 +840,20 @@ footer .twitter-mod {
   border-bottom-right-radius: 4px;
 }
 /* Custom select/dropdown - overrides bootstrap-select.css */
+.bootstrap-select {
+  font-family: "Oswald";
+}
 .bootstrap-select .btn {
-  padding-right: 50px;
+  color: #fff;
+  padding: 0 50px 0 10px;
+  background: #6b6e74;
+  font-weight: 200;
+  font-size: 18px;
+  line-height: 45px;
 }
 .bootstrap-select .btn:hover,
 .bootstrap-select .btn:focus {
-  background-color: #fff;
-  border: 1px solid #36a6ef;
+  background-color: #777b81;
 }
 .bootstrap-select .btn:focus {
   outline: 0 !important;
@@ -828,19 +862,25 @@ footer .twitter-mod {
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.bootstrap-select .dropdown-menu {
+  background: #6b6e74;
+}
+.bootstrap-select .dropdown-menu li > a {
+  color: #fff;
+}
 .bootstrap-select .dropdown-menu li > a:hover,
 .bootstrap-select .dropdown-menu li > a:focus {
   color: #fff;
-  background: #36a6ef;
+  background: #20c069;
 }
 .bootstrap-select .dropdown-menu li.selected a {
   color: #333333;
-  background: #7dc6f5;
+  background: #77e8ab;
 }
 .bootstrap-select.btn-group .btn .caret {
   color: #fff;
   width: 40px;
-  height: 34px;
+  line-height: 45px;
   border: none;
   margin: 0;
   position: absolute;
@@ -848,7 +888,6 @@ footer .twitter-mod {
   right: -1px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
-  background: #36a6ef;
 }
 .bootstrap-select.btn-group .btn .caret:after {
   font-family: FontAwesome;
@@ -857,7 +896,8 @@ footer .twitter-mod {
   content: '\f107';
 }
 .bootstrap-select.open .dropdown-toggle.btn {
-  background: #fff;
+  color: #fff;
+  background-color: #777b81;
 }
 /* Utility Classes */
 .clear {
@@ -922,10 +962,16 @@ footer .twitter-mod {
     text-align: center;
     border-bottom: 0;
     height: 85px;
+    width: 100px;
+    border-right: 1px solid #dfe3eb;
+  }
+  .sitenav > .navbar-nav > li:last-child {
+    border-right: 0;
   }
   .sitenav > .navbar-nav > li > a {
     padding-bottom: 0;
     height: 100%;
+    color: #555555;
   }
   .sitenav > .navbar-nav > li > a span,
   .sitenav > .navbar-nav > li > a i {
@@ -938,21 +984,23 @@ footer .twitter-mod {
     position: relative;
   }
   .sitenav > .navbar-nav > li > a:hover {
-    color: #36a6ef;
+    color: #20c069;
   }
   .sitenav > .navbar-nav > li > a:hover span,
   .sitenav > .navbar-nav > li > a:hover i {
     top: -4px;
   }
   .sitenav > .navbar-nav > li.active > a {
-    color: #333333;
+    color: #fff;
+    background-color: #20c069;
   }
   .sitenav > .navbar-nav > li.active > a span,
   .sitenav > .navbar-nav > li.active > a i {
     top: -4px;
   }
   .sitenav > .navbar-nav > li.active > a:hover {
-    color: #333333;
+    color: #fff;
+    background-color: #20c069;
   }
   .nails,
   .notepad {
