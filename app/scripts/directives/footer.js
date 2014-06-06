@@ -1,10 +1,11 @@
 'use strict';
 
 angular.module('hwdApp')
-.directive('footer', function () {
+.directive('hwdFooter', function () {
 	return {
 	  templateUrl: 'templates/footer.html',
-	  restrict: 'E',
+	  restrict: 'A',
+	  replace: true,
 	  controller: 'FooterCtrl'
 	};
 });
