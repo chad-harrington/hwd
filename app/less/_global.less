@@ -3,13 +3,25 @@
 
 // colors
 @white: #fff;
-@red: red;
+@red: #f00;
 @green: #20c069;
 @green2: #18ac5c;
 @blue: #128fe0;
 @blue2: #1a69a2;
+@gray2: #2a2c30;
+@gray3: #313438;
+@gray4: #1e1f21;
+@gray5: #9aa3af;
+
 @grad-blue-bottom: @blue2;
 @grad-blue-top: @blue;
+@footer-bg-color: @gray2;
+@footer-border-color: @gray3;
+@footer-sidebar-bg-color: @gray4;
+@footer-header-color: @gray5;
+
+@oswald-stack: "Oswald", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+
 
 /* Globals */
 html { height: 100%; }
@@ -18,7 +30,7 @@ body {
 	position: relative;
 	min-height: 100%;
 	background: #d8d8d8;
-	background: url(/images/ui/bg/bright-squares.jpg) repeat 0 0;
+	background: url(/images/ui/bg/bright-squares.png) repeat 0 0;
 }
 //html,body {overflow:auto;}
 a:focus,
@@ -55,7 +67,7 @@ button:focus,
 	
 	.navbar-brand {
 		color: @gray;
-		font-family: 'Oswald';
+		font-family: @oswald-stack;
 		font-weight: bold;
 		font-size: 28px;
 		line-height: 1;
@@ -132,7 +144,7 @@ button:focus,
 		
 		a { 
 			color: #5d6370;
-			font-family: "Oswald","Franklin Gothic Medium","Arial Narrow",Arial,sans-serif; 
+			font-family: @oswald-stack; 
 		}
 
 	}
@@ -240,7 +252,7 @@ div[data-ng-view] > section.container {
 
 .hdr {
 	color: #2a2c30;
-	font-family: "Oswald", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+	font-family: @oswald-stack;
 	font-weight: normal;
 	text-shadow: 0 4px 0 #d4dce2;
 }
@@ -520,12 +532,16 @@ div[data-ng-view] > section.container {
 }
 
 
-footer {
+.hwd-footer {
 	color: #fff;
-	background: @gray-dark;
+	border-top: 28px solid @footer-border-color;
+	background: @footer-bg-color;
 
 	h3 {
-		font-family: 'Roboto Condensed';
+		color: @footer-header-color;
+		font-family: @oswald-stack;
+		font-weight: 400;
+		font-size: 26px;
 		padding-bottom: 15px;
 		border-bottom: 1px solid #444;
 		-webkit-box-shadow: 0 1px 0 #000;
@@ -1007,7 +1023,7 @@ footer {
 
 /* Custom select/dropdown - overrides bootstrap-select.css */
 .bootstrap-select {
-	font-family: "Oswald";
+	font-family: @oswald-stack;
 	.btn {
 		color: #fff;
 		padding: 0 50px 0 10px;
@@ -1083,6 +1099,11 @@ footer {
 .clear {
 	clear: both;
 }
+.allcaps {
+	text-transform: uppercase;
+}
+
+
 
 .view-container { position: relative; }
 /* Animation Classes */
@@ -1210,7 +1231,7 @@ footer {
 
 	
 
-	footer .col-sm-6 {
+	.hwd-footer .col-sm-6 {
 		min-height: 110px;
 	}
 }
