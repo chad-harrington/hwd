@@ -50,6 +50,14 @@ button:focus,
 	background: url(/images/ui/bg/bright-squares.png) repeat 0 0;
 }
 
+.btn-hwd {
+  .button-variant(@white; @green; darken(@green, 12%));
+}
+
+.form-control {
+	.form-control-focus(@color: @green);
+}
+
 .header.navbar {
 	margin-bottom: 0;
 	background: #fff;
@@ -1045,6 +1053,7 @@ div[data-ng-view] > section.container {
 
 /* Custom select/dropdown - overrides bootstrap-select.css */
 .bootstrap-select {
+	height: auto;
 	font-family: @oswald-stack;
 	.btn {
 		color: #fff;
@@ -1062,24 +1071,32 @@ div[data-ng-view] > section.container {
 	}
 	
 	.dropdown-menu {
+		margin: 0;
+		padding: 0;
+		background: #777b81;
+		
 
-		background: #6b6e74;
 		li {
-			
+			border-bottom: 1px solid #6b6e74;
 			> a {
+				line-height: 45px;
+				font-size: 18px;
+				font-weight: 300;
 				color: #fff;
-				&:hover, &:focus { color: #fff; background: @green; }
+				padding-top: 0;
+				padding-bottom: 0;
+				&:hover, &:focus { color: #fff; background: #84878e; }
 			}
 			
 			&.selected a {
-				color: @text-color;
-				background: lighten(@green, 25%);
+				background: #6b6e74;
 			}	
-			
 
+			&:last-child {
+				border-bottom: 0;
+			}
 		}
 
-		
 	}
 
 	&.btn-group {
@@ -1105,6 +1122,11 @@ div[data-ng-view] > section.container {
 				}
 			}
 		}
+
+		.dropdown-menu.inner {
+			.box-shadow(0 8px 36px 4px rgba(31,48,71,0.25));
+		}
+
 	}
 
 	&.open {
