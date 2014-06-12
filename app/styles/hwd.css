@@ -1202,6 +1202,15 @@ div[data-ng-view] > section.container {
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
 }
+.welcome-wrap {
+  background: rgba(255, 255, 255, 0.4);
+}
+.portfolio-wrap {
+  background: rgba(255, 255, 255, 0.4);
+}
+.testimonials-wrap {
+  background: rgba(255, 255, 255, 0.4);
+}
 .laptop {
   position: relative;
   margin-bottom: 30px;
@@ -1311,3 +1320,4 @@ div[data-ng-view] > section.container {
     height: 322px;
   }
 }
+
