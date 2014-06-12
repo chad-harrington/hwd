@@ -9,61 +9,67 @@
 </div><!-- /.home-hero -->
 
 
-<section id="content" class="container">
+<section id="content">
 	
-	<div class="row">
-
-		<div id="main" class="main col-md-8" role="main">
-			
-			<div class="welcome clearfix">
-				<h2 class="hdr page-title">Welcome!</h2>
-				<p class="lead">I'm mostly using this site as a <em>resume</em> to demonstrate my skills as a UI Developer. In addition, this site will be used as a <em>sandbox</em> for front end web development...and possibly more. What does that entail? I'm not sure yet, but I'll figure it out as I go.</p>
-			</div> <!-- End .welcome -->
-			
-			<div class="">
-				<h2 class="hdr">Portfolio</h2>
-				<div class="laptop">
-				
-					<!-- <span class="glare"></span> -->
-					<div class="laptop-bg hidden-xs">
-						<img class="img-responsive" src="/images/ui/macbook.png" alt="Macbook Pro">
-					</div>
-					<div id="laptop-carousel">
-
-						<carousel interval="slideInterval">
-							<slide data-ng-repeat="slide in slides" active="slide.active">
-								<img data-ng-src="{{slide.img}}" alt="{{slide.imgAlt}}" style="margin:auto;" />
-								<div class="carousel-caption">
-									<h3>{{slide.caption}}</h3>
-								</div>
-							</slide>
-						</carousel>
-					
-					</div><!-- /.carousel -->
-				
-				</div><!-- /.laptop -->
+	<div class="container container-welcome">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="welcome clearfix">
+					<h2 class="hdr page-title">Welcome!</h2>
+					<p class="lead">I'm mostly using this site as a <em>resume</em> to demonstrate my skills as a UI Developer. In addition, this site will be used as a <em>sandbox</em> for front end web development...and possibly more. What does that entail? I'm not sure yet, but I'll figure it out as I go.</p>
+				</div> <!-- End .welcome -->
 			</div>
-
-			<div class="testimonials">
-				<h2>Testimonials</h2>
-				<carousel interval="slideInterval">
-					<slide data-ng-repeat="testimonial in testimonials" active="testimonial.active">
-						<div class="testimonial">
-							<blockquote class="text-left">
-								<p><span class="fa fa-quote-left"></span> {{testimonial.quote}} <span class="fa fa-quote-right"></span></p>
-								<p class="author">{{testimonial.author}}</p>
-							</blockquote>
-						</div>
-					</slide>
-				</carousel>
-			</div> <!-- End .testimonial -->
-		
-		</div> <!-- /.main.col-md-8 -->
-
-		<div class="col-md-4">
-			<div data-ng-include="'templates/sidebar.html'"></div>
 		</div>
+	</div>
 
-	</div><!-- /.row -->
+	<div class="container container-portfolio">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="portfolio-slideshow">
+					<h2 class="hdr">Portfolio</h2>
+					<div class="laptop">
+					
+						<!-- <span class="glare"></span> -->
+						<div class="laptop-bg hidden-xs">
+							<img class="img-responsive" src="/images/ui/macbook.png" alt="Macbook Pro">
+						</div>
+						<div id="laptop-carousel">
+
+							<carousel interval="slideInterval">
+								<slide data-ng-repeat="slide in slides" active="slide.active">
+									<img data-ng-src="{{slide.img}}" alt="{{slide.imgAlt}}" style="margin:auto;" />
+									<div class="carousel-caption">
+										<h3>{{slide.caption}}</h3>
+									</div>
+								</slide>
+							</carousel>
+						
+						</div><!-- /.carousel -->
+					
+					</div><!-- /.laptop -->
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="container container-testimonials">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="testimonials">
+					<h2>Testimonials</h2>
+					<carousel interval="slideInterval">
+						<slide data-ng-repeat="testimonial in testimonials" active="testimonial.active">
+							<div class="testimonial">
+								<blockquote class="text-left">
+									<p><span class="fa fa-quote-left"></span> {{testimonial.quote}} <span class="fa fa-quote-right"></span></p>
+									<p class="author">{{testimonial.author}}</p>
+								</blockquote>
+							</div>
+						</slide>
+					</carousel>
+				</div> <!-- End .testimonial -->
+			</div>
+		</div>
+	</div>
 
 </section><!-- /.content -->
