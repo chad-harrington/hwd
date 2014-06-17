@@ -22,6 +22,7 @@ button:focus,
   background: #d8d8d8;
   background: url(/images/ui/bg/bright-squares.png) repeat 0 0;
 }
+/* Custom Buttons */
 .btn-hwd {
   color: #ffffff;
   background-color: #20c069;
@@ -62,6 +63,19 @@ fieldset[disabled] .btn-hwd.active {
 .btn-hwd .badge {
   color: #20c069;
   background-color: #ffffff;
+}
+.border-btn {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 20px 50px;
+  display: inline-block;
+  border: 1px solid #ffffff;
+}
+.border-btn:hover {
+  color: #ffffff;
+  text-decoration: none;
 }
 .form-control:focus {
   border-color: #20c069;
@@ -1192,24 +1206,114 @@ div[data-ng-view] > section.container {
   -webkit-box-shadow: inset 0 -4 4px rgba(0,0,0,.35);
   box-shadow: inset 0 -4 4px rgba(0,0,0,.35);
   background-color: #128fe0;
-  background-image: url(/images/ui/bg/slanted-lines.png), -webkit-linear-gradient(to bottom, #128fe0, #1a69a2);
-  background-image: url(/images/ui/bg/slanted-lines.png), -moz-linear-gradient(to bottom, #128fe0, #1a69a2);
-  background-image: url(/images/ui/bg/slanted-lines.png), -o-linear-gradient(to bottom, #128fe0, #1a69a2);
-  background-image: url(/images/ui/bg/slanted-lines.png), -ms-linear-gradient(to bottom, #128fe0, #1a69a2);
-  background-image: url(/images/ui/bg/slanted-lines.png), linear-gradient(to bottom, #128fe0, #1a69a2);
+  background-image: -webkit-linear-gradient(top, #20c069 0%, #18ac5c 100%);
+  background-image: linear-gradient(to bottom, #20c069 0%, #18ac5c 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff20c069', endColorstr='#ff18ac5c', GradientType=0);
 }
 .home-hero .h1 {
   color: #fff;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
 }
+/* Home Hero Slides */
+#slides {
+  position: relative;
+}
+#slides .slides-container {
+  display: none;
+}
+#slides .scrollable {
+  *zoom: 1;
+  position: relative;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+}
+#slides .scrollable:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.slides-navigation {
+  margin: 0 auto;
+  position: absolute;
+  z-index: 3;
+  top: 46%;
+  width: 100%;
+}
+.slides-navigation a {
+  position: absolute;
+  display: block;
+}
+.slides-navigation a.prev {
+  left: 0;
+}
+.slides-navigation a.next {
+  right: 0;
+}
+.slides-pagination {
+  osition: absolute;
+  -index: 3;
+  ottom: 0;
+  ext-align: center;
+  idth: 100%;
+}
+.slides-pagination a {
+  border: 2px solid #222;
+  border-radius: 15px;
+  width: 10px;
+  height: 10px;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=");
+  margin: 2px;
+  overflow: hidden;
+  text-indent: -100%;
+}
+.slides-pagination a.current {
+  background: #222;
+}
 .welcome-wrap {
-  background: rgba(255, 255, 255, 0.4);
+  background: #18ac5c;
 }
 .portfolio-wrap {
   background: rgba(255, 255, 255, 0.4);
 }
 .testimonials-wrap {
   background: rgba(255, 255, 255, 0.4);
+}
+.welcome {
+  padding-top: 20px;
+}
+.welcome .profile-pic {
+  text-align: center;
+  margin: 0 auto;
+  float: none;
+}
+.welcome .profile-pic img {
+  width: 90%;
+  height: auto;
+}
+.welcome .profile-pic img:before,
+.welcome .profile-pic img:after {
+  content: " ";
+  display: table;
+}
+.welcome .profile-pic img:after {
+  clear: both;
+}
+.welcome .heading {
+  text-align: center;
+  padding-bottom: 40px;
+}
+.welcome .border-btn {
+  margin-top: 20px;
 }
 .laptop {
   position: relative;

@@ -28,8 +28,25 @@ button:focus,
 	background: url(/images/ui/bg/bright-squares.png) repeat 0 0;
 }
 
+/* Custom Buttons */
 .btn-hwd {
-  .button-variant(@white; @green; darken(@green, 12%));
+	.button-variant(@white; @green; darken(@green, 12%));
+}
+
+.border-btn {
+	color: #fff;
+	text-decoration: none;
+	text-transform: uppercase;
+	border-radius: 3px;
+	padding: 20px 50px;
+	display: inline-block;
+	border: 1px solid @white;
+
+	&:hover {
+		color: @white;
+		text-decoration: none;
+	}
+
 }
 
 .form-control {
@@ -1116,6 +1133,8 @@ div[data-ng-view] > section.container {
 
 
 }
+
+
 
 /* Utility Classes */
 .clear {
