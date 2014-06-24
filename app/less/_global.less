@@ -1139,7 +1139,14 @@ div[data-ng-view] > section.container {
 	}
 }
 
-
+@media (max-width: @screen-sm) {
+	.timeline { background-position: 38px top; }
+	.timeline li, .timeline .odd { margin: 0px 0 20px 43px; width: 85%; }
+	.timeline .point, .timeline .odd .point { left: -32px; right: auto; }
+	.timeline .timestamp, .timeline .bubble { float: left; }
+	.timeline .bubble, .timeline .odd .bubble { margin: 0px 0 0 30px; width: 80%; padding: 22px 30px 25px 32px; }
+	.timeline .bubble-arrow { background-position: right top; left: -10px; right: auto; }
+}
 
 /* Media Queries */
 @media (min-width: @screen-tablet) {

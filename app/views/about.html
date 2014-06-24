@@ -58,40 +58,13 @@
 						<div class="timeline">
 							<ul class="list-unstyled">
 								<!--Experience Items-->
-								<li class="">
+								<li data-ng-repeat="item in Chad.experience" data-ng-class-odd="'odd'">
 									<div class="point"></div>
 									<div class="bubble">
 										<div class="bubble-arrow"></div>
-										<p class="date">July 2012 - Present</p>
-										<p class="name">Company A</p>
-										<p class="title">Senior UX Designer</p>
-									</div>
-								</li>
-								<li class="odd">
-									<div class="point"></div>
-									<div class="bubble">
-										<div class="bubble-arrow"></div>
-										<p class="date">Mar. 2010 - July 2012</p>
-										<p class="name">Company B</p>
-										<p class="title">Front-end Developer</p>
-									</div>
-								</li>
-								<li class="">
-									<div class="point"></div>
-									<div class="bubble">
-										<div class="bubble-arrow"></div>
-										<p class="date">Feb. 2005 - Dec. 2007</p>
-										<p class="name">An Agency</p>
-										<p class="title">Jr. Art Director</p>
-									</div>
-								</li>
-								<li class="odd">
-									<div class="point"></div>
-									<div class="bubble">
-										<div class="bubble-arrow"></div>
-										<p class="date">11/04/13</p>
-										<p class="name">Company C</p>
-										<p class="title">Jr. Front-end Developer</p>
+										<p class="date">{{item.date.from}} - {{item.date.to}}</p>
+										<p class="name">{{item.company}}</p>
+										<p class="title">{{item.position}}</p>
 									</div>
 								</li>
 								<!--Experience Items-->
