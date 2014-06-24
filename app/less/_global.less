@@ -1074,16 +1074,16 @@ div[data-ng-view] > section.container {
 .timeline .bubble p { font-size: 14px; line-height: 1.3; font-weight: 400; color: white; margin: 0px; text-align: left; margin: 0 0 15px 0px; }
 .timeline .bubble p.name { font-size: 20px; font-weight: 700; margin: 0px; }
 .timeline .bubble p.title { font-size: 14px; font-weight: 400; margin: 0px; }
-.timeline .odd { margin: 80px 0 0 0; }
-.timeline .odd .bubble-arrow { left: -10px; right: auto; background-position: right top; }
-.timeline .odd .bubble { margin: 0px 0px 0 30px; }
-.timeline .odd .point { left: -29px; }
-.timeline .odd .timestamp { float: left; }
-.timeline .odd .timestamp p.date,
-.timeline .odd .timestamp p.time { text-align: left; margin: 0 0 0 50px; }
-.timeline .odd .timestamp p.date { margin-top: 10px; }
-.timeline .odd .bubble { float: left; }
-.timeline .odd .bubble img { left: auto; right: -34px; }
+.timeline .even { margin: 80px 0 0 0; }
+.timeline .even .bubble-arrow { left: -10px; right: auto; background-position: right top; }
+.timeline .even .bubble { margin: 0px 0px 0 30px; }
+.timeline .even .point { left: -29px; }
+.timeline .even .timestamp { float: left; }
+.timeline .even .timestamp p.date,
+.timeline .even .timestamp p.time { text-align: left; margin: 0 0 0 50px; }
+.timeline .even .timestamp p.date { margin-top: 10px; }
+.timeline .even .bubble { float: left; }
+.timeline .even .bubble img { left: auto; right: -34px; }
 
 /* Utility Classes */
 .clear {
@@ -1141,10 +1141,10 @@ div[data-ng-view] > section.container {
 
 @media (max-width: @screen-sm) {
 	.timeline { background-position: 38px top; }
-	.timeline li, .timeline .odd { margin: 0px 0 20px 43px; width: 85%; }
-	.timeline .point, .timeline .odd .point { left: -32px; right: auto; }
+	.timeline li, .timeline .even { margin: 0px 0 20px 43px; width: 85%; }
+	.timeline .point, .timeline .even .point { left: -32px; right: auto; }
 	.timeline .timestamp, .timeline .bubble { float: left; }
-	.timeline .bubble, .timeline .odd .bubble { margin: 0px 0 0 30px; width: 80%; padding: 22px 30px 25px 32px; }
+	.timeline .bubble, .timeline .even .bubble { margin: 0px 0 0 30px; width: 80%; padding: 22px 30px 25px 32px; }
 	.timeline .bubble-arrow { background-position: right top; left: -10px; right: auto; }
 }
 

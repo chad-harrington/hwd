@@ -49,29 +49,29 @@
 
 			<!--Experience Section-->
 			<div class="experience section" id="experience">
-				<div class="container">
-					<div class="divider"></div>
-					<div class="heading">
-						<h3>Work Experience</h3>
-					</div>
-					<div class="row">
-						<div class="timeline">
-							<ul class="list-unstyled">
-								<!--Experience Items-->
-								<li data-ng-repeat="item in Chad.experience" data-ng-class-odd="'odd'">
-									<div class="point"></div>
-									<div class="bubble">
-										<div class="bubble-arrow"></div>
-										<p class="date">{{item.date.from}} - {{item.date.to}}</p>
-										<p class="name">{{item.company}}</p>
-										<p class="title">{{item.position}}</p>
-									</div>
-								</li>
-								<!--Experience Items-->
-							</ul>
-						</div>
+				
+				<div class="divider"></div>
+				<div class="heading">
+					<h3>Work Experience</h3>
+				</div>
+				<div class="row">
+					<div class="timeline">
+						<ul class="list-unstyled">
+							<!--Experience Items-->
+							<li data-ng-repeat="item in Chad.experience" data-ng-class-even="'even'">
+								<div class="point"></div>
+								<div class="bubble">
+									<div class="bubble-arrow"></div>
+									<p class="date">{{item.date.from}} - {{item.date.to}}</p>
+									<p class="name">{{item.company}}</p>
+									<p class="title">{{item.position}}</p>
+								</div>
+							</li>
+							<!--Experience Items-->
+						</ul>
 					</div>
 				</div>
+				
 			</div>
 			<!--Experience Section-->
 

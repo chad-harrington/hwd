@@ -1012,35 +1012,35 @@ div[data-ng-view] > section.container {
   font-weight: 400;
   margin: 0px;
 }
-.timeline .odd {
+.timeline .even {
   margin: 80px 0 0 0;
 }
-.timeline .odd .bubble-arrow {
+.timeline .even .bubble-arrow {
   left: -10px;
   right: auto;
   background-position: right top;
 }
-.timeline .odd .bubble {
+.timeline .even .bubble {
   margin: 0px 0px 0 30px;
 }
-.timeline .odd .point {
+.timeline .even .point {
   left: -29px;
 }
-.timeline .odd .timestamp {
+.timeline .even .timestamp {
   float: left;
 }
-.timeline .odd .timestamp p.date,
-.timeline .odd .timestamp p.time {
+.timeline .even .timestamp p.date,
+.timeline .even .timestamp p.time {
   text-align: left;
   margin: 0 0 0 50px;
 }
-.timeline .odd .timestamp p.date {
+.timeline .even .timestamp p.date {
   margin-top: 10px;
 }
-.timeline .odd .bubble {
+.timeline .even .bubble {
   float: left;
 }
-.timeline .odd .bubble img {
+.timeline .even .bubble img {
   left: auto;
   right: -34px;
 }
@@ -1094,12 +1094,12 @@ div[data-ng-view] > section.container {
     background-position: 38px top;
   }
   .timeline li,
-  .timeline .odd {
+  .timeline .even {
     margin: 0px 0 20px 43px;
     width: 85%;
   }
   .timeline .point,
-  .timeline .odd .point {
+  .timeline .even .point {
     left: -32px;
     right: auto;
   }
@@ -1108,7 +1108,7 @@ div[data-ng-view] > section.container {
     float: left;
   }
   .timeline .bubble,
-  .timeline .odd .bubble {
+  .timeline .even .bubble {
     margin: 0px 0 0 30px;
     width: 80%;
     padding: 22px 30px 25px 32px;

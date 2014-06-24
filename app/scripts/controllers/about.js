@@ -1,11 +1,12 @@
 'use strict';
 
 angular.module('hwdApp')
-.controller('AboutCtrl', function ($scope, Skills, Education) {
+.controller('AboutCtrl', function ($scope, Skills, Education, Experience) {
 	
 	$scope.Chad = {
 		skills: Skills.query(),
-		education: Education.query()
+		education: Education.query(),
+		experience: Experience.query()
 	};
 
 	$scope.rate = 3;
